@@ -34,8 +34,7 @@ export default function PersonalInfo() {
             <h3 style={{backgroundColor:'white'}}  > Hello, this is Venu Mallik. Full stack developer & Data visualization Engineer </h3>
             <i>
                 Currently, working at a MNC in a remote role, Open to offers. <br></br>
-                Prefer remote jobs, temporarily okay to travel into electrosmog, light and air pollution in mega cities.<br></br>
-                Sun is God, Sun Light is life. 
+                Prefer remote jobs, temporarily okay to travel.
             </i><br></br> <br></br>
             <Descriptions title={""} layout="horizontal" size="small"  column={{ xxl: 4, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }}>
                 <Descriptions.Item label="Email">venu.mallik@gmail.com</Descriptions.Item>
