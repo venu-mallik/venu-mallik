@@ -1,0 +1,18 @@
+.ant-page-header .ant-page-header-heading {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ant-page-header .ant-page-header-heading .ant-page-header-heading-extras {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ant-page-header .ant-page-header-footer {
+ 
+}
+
+.ant-card-meta-description {
+color: rgba(0, 0, 0, 1) !important
+}
+
