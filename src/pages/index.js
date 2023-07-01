@@ -6,7 +6,6 @@ import {
 import { Col, Row, Select, Layout, Table, Menu, Tag, Card } from 'antd';
 import { SearchMoonQuarter } from 'astronomy-engine';
 import { tabsList } from '@/components/menu';
-import CitiesDistance from '@/components/citiesComponent';
 import PersonalInfo from '@/components/resume';
 import vegaEmbed from 'vega-embed';
 
@@ -154,9 +153,6 @@ export default function Home() {
             {
               activeTab == -1 && <PersonalInfo/>
             } 
-            {
-              activeTab == 0 && <CitiesDistance/>
-            }
             {activeTab > 0 && <Row>
               <Col>
                 <Select style={{ width: '500px' }}

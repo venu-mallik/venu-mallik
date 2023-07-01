@@ -60,7 +60,7 @@ export default function PersonalInfo() {
                         })}
             </Descriptions>
 
-            <Segmented options={[ 'Backend', 'Frontend', 'Databases', 'Devops', 'Leadership']} size="small"
+            <Segmented options={[ 'Backend', 'Frontend', 'Databases', 'Devops', 'Leadership', 'Websites']} size="small"
               onChange={(v)=>setFlag(v)} > </Segmented>
               <div>
             {
@@ -131,6 +131,19 @@ export default function PersonalInfo() {
                 </ul>
 
 
+            }
+
+            {
+                flag === 'Websites' && 
+                <ul style={ulStyle} >
+                    <li> The following are Professional and other websites i worked on </li>
+                    <li> <a href="https://minipix.in" target="_blank" >React OTT website in a previous company i am part of</a>
+                    </li>
+                    <li> <a href="https://minipix-api.ibee.ai/docs" target="_blank" >Fastapi api supporting above react website</a>
+                    </li>                
+                    <li> <a href="https://cities.pages.dev" target="_blank" >Cities & Geodistance btw them</a>
+                    </li>
+                </ul>
             }
             </div>
 
