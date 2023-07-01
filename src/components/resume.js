@@ -69,19 +69,19 @@ export default function PersonalInfo() {
                             <li> Better understanding of Open API & JSON Schema for models.</li><li>
                             Have production scale experience using FastAPI in Python, Jax RS in Java and 
                             hands on experience using express framework in Javascript. </li><li>
-                            Oauth2 authentication & experience implementing RBAC, ACL, ABAC authentication layers. <br></br></li><li>
+                            Oauth2 authentication & experience implementing RBAC, ACL, ABAC authorisation layers. <br></br></li><li>
                             Integrating with third party libraries like Payment gateways, google firebase, cloudflare logs,
-                            writing resumable or s3 upload protocols for own data storage etc. <br></br></li><li>
-                            Have production scale experience using pandas and data visualization libraries
+                            resumable or s3 upload protocols for own data storage etc. <br></br></li><li>
+                            Have Professional experience using pandas and data visualization libraries
                             like Matplotlib, Seaborn, Plotly Dash & Bokeh.</li>
                         </ul>            
             }
             {
                 flag === 'Frontend' && 
                         <ul style={ulStyle}> 
-                           <li> Production scale CMS experience using React Hooks & Antd framework. <br></br></li>
+                           <li> Production ready Content management systems using React Hooks & Antd framework. <br></br></li>
                            <li>
-                            Production scale user facing experience using ReactJS , NextJS libraries. <br></br></li>
+                            Production ready end user websites using ReactJS , NextJS libraries. <br></br></li>
                             <li>
                             Hands on experience in using libraries like Shaka player & Shaka streamer, Uppy, 
                             google firebase, google charts, Vega-lite charts etc. <br></br></li>
