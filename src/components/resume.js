@@ -23,27 +23,28 @@ export default function PersonalInfo() {
         "Python & FastAPI" : 4.5,
         "Pandas & Data Visualisation": 4,
         "MySQL & Mongo DB" : 4,
-        "Javascript & (ReactJS, Next JS)": 3.5,
+        "Javascript & (ReactJS, Next JS)": 3.75,
         "S3, SES API, Open Stack, Google Firebase" : 3.5,
-        "Devops, Queues & Caching" : 2.5
+        "Devops, Queues & Caching" : 3
     }
 
     return (
         <Layout >
             <Content style={{backgroundColor:'white' , padding:"2%" , height: "90vh"}}>
-            <h3 style={{backgroundColor:'white'}}  > Hello, this is Venu Mallik. Full stack developer & Data visualization Engineer </h3>
-            <i>
-                Currently, working at a MNC in a remote role, Open to offers. <br></br>
-                Prefer remote jobs, temporarily okay to travel.
-            </i><br></br> <br></br>
+            <h3 style={{backgroundColor:'white', fontStyle : 'oblique', font : "initial" }}  > Welcome, I am a
+            Senior engineer at an MNC. <br></br>
+            Have a great deal of experience in full stack development and Data engineering.
+            <br></br>
+            Prefer remote jobs, temporarily okay to travel.
+            </h3>
             <Descriptions title={""} layout="horizontal" size="small"  column={{ xxl: 4, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }}>
                 <Descriptions.Item label="Email">venu.mallik@gmail.com</Descriptions.Item>
                 <Descriptions.Item label="Telephone">+91 98859 20369</Descriptions.Item>
                 <Descriptions.Item label="Address">
                     Vijayawada , Andhra Pradesh, India
                 </Descriptions.Item>
-                <Descriptions.Item label="Github & Linkedin"><a target="_blank" href={"https://www.github.com/vrworkers"} > Github </a>,&nbsp;<a  target="_blank" href={"https://www.linkedin.com/in/venumallik"} >Linkedin</a></Descriptions.Item>
-                <Descriptions.Item label="Resume"><a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > resume </a> </Descriptions.Item>
+                <Descriptions.Item label="Links"><a target="_blank" href={"https://www.github.com/vrworkers"} > Github </a>,&nbsp;<a  target="_blank" href={"https://www.linkedin.com/in/venumallik"} >Linkedin</a>&nbsp; <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a></Descriptions.Item>
+                <Descriptions.Item label="Education">Information tech, JNTU Kakinada 2012-16 </Descriptions.Item>
                 <Descriptions.Item label="Experience">
                 {expmap[exp]} &nbsp;&nbsp;<Segmented options={[ 'Weeks', 'Months', 'Years']} size="small"  onChange={(v)=>setExp(v)} >
                  </Segmented>  </Descriptions.Item>
