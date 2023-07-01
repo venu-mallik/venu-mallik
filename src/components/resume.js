@@ -141,7 +141,7 @@ export default function PersonalInfo() {
                     </li>
                     <li> <a href="https://minipix-api.ibee.ai/docs" target="_blank" >Fastapi api supporting above react website</a>
                     </li>                
-                    <li> <a href="https://cities.pages.dev" target="_blank" >Cities & Geodistance btw them</a>
+                    <li> <a href="https://citygrid.pages.dev" target="_blank" >Cities & Geodistance btw them</a>
                     </li>
                 </ul>
             }
