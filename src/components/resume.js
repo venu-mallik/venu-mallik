@@ -132,7 +132,7 @@ export default function PersonalInfo() {
                     <li> 
                     <a target="_blank" href="/stack.png">Popular libraries</a> shows comparision of adoption between FastAPI, Django, Flask, Expressjs, NextJS, AntD.
                     </li>
-                    <li> I have production ready exposure to FastAPI,AntD, NextJS, Express JS to build full stack applications </li>
+                    <li> I have production ready experience with FastAPI,AntD, NextJS, Express JS to build full stack applications </li>
                 </ul>
 
 
