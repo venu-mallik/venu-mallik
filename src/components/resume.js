@@ -61,7 +61,7 @@ export default function PersonalInfo() {
                         })}
             </Descriptions>
 
-            <Segmented options={[ 'Backend', 'Frontend', 'Databases', 'Devops', 'Leadership', 'Websites']} size="small"
+            <Segmented options={[ 'Leadership', 'Backend', 'Frontend', 'Databases', 'Devops', 'Websites']} size="small"
               onChange={(v)=>setFlag(v)} > </Segmented>
               <div>
             {
@@ -117,12 +117,15 @@ export default function PersonalInfo() {
             {
                 flag === 'Leadership' &&
                 <ul style={ulStyle} >
-                    <li> Lead a team in query optimisation , reducing the redundant joins & unnecessary sub queries.
+                    <li> Lead a team in query optimisation, reducing the redundant joins & sub queries.
                     </li>
-                    <li> Handheld developers in my previous organisation & absorbed them into team by guiding them.
+                    <li> Microservices & frontend developer collaborating with one designer, android, ios developer in a team of 5.
                     </li>
                     <li>
-                        Generated Pydantic models using enums from Plexos tool, to reduce the steep learning curve for new developers.
+                        Lead the Code quality reviews and optimisation, <u>reduced 10k lines to 2k lines of cooe and saved 45 Mins execution time in a ETL project.</u>
+                    </li>
+                    <li>
+                        <u>Reverse engineered Schema from C# enums of a tool</u>, to reduce the steep adoption curve for new developers.
                         Mentored them doing code reviews & enforcing best practices using linting, style guides & low code patterns.
                     </li>
                     <li> 
