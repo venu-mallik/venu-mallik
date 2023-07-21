@@ -126,7 +126,7 @@ export default function PersonalInfo() {
                         the total execution time is brought down from 2 Hours to 1 Hour 10 Minutes .
                     </li>
                     <li>
-                        <u>Reverse engineered Schema from C# enums of a tool</u>, to reduce the steep adoption curve for all stake holders.
+                        <u>Reverse engineered Schema from C# enums of prop tool</u> to reduce the steep adoption curve for all stake holders.
                         Mentored them doing code reviews & enforcing best practices using linting, style guides & low code patterns.
                     </li>
                     <li> 
