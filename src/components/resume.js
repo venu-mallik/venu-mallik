@@ -5,7 +5,7 @@ export default function PersonalInfo() {
 
     const { Content , Header, Footer, Sider } = Layout;
     const [exp,setExp] = useState("Years");
-    const [flag,setFlag] = useState("Backend");
+    const [flag,setFlag] = useState("Leadership");
     const start = new Date(2016,8,1);
     const now = new Date();
     const diffTime = Math.abs(now  - start);
@@ -130,9 +130,9 @@ export default function PersonalInfo() {
                         Mentored them doing code reviews & enforcing best practices using linting, style guides & low code patterns.
                     </li>
                     <li> 
-                    <a target="_blank" href="https://star-history.com/#tiangolo/fastapi&pallets/flask&django/django&expressjs/express&ant-design/ant-design&vercel/next.js&Timeline">Popular libraries</a> shows comparision of adoption between FastAPI, Django, Flask, Expressjs, NextJS, AntD.
+                    <a target="_blank" href="/stack.png">Popular libraries</a> shows comparision of adoption between FastAPI, Django, Flask, Expressjs, NextJS, AntD.
                     </li>
-                    <li>Happy to announce, I am huge fan of FastAPI,AntD, NextJS and have extensive production ready experience using them </li>
+                    <li> I have production ready exposure to FastAPI,AntD, NextJS, Express JS to build full stack applications </li>
                 </ul>
 
 
