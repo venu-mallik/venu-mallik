@@ -122,10 +122,11 @@ export default function PersonalInfo() {
                     <li> Microservices & frontend developer collaborating with one designer, android, ios developer in a team of 5.
                     </li>
                     <li>
-                        Lead the Code quality reviews and optimisation, <u>reduced 10k lines to 2k lines of cooe and saved 45 Mins execution time in a ETL project.</u>
+                        Lead the Code quality reviews and optimisation, <u>reduced from 10k lines to 2k lines of code and saved 45 minutes execution time in a ETL project.</u>
+                        the total execution time is brought down from 2 Hours to 1 Hour 10 Minutes .
                     </li>
                     <li>
-                        <u>Reverse engineered Schema from C# enums of a tool</u>, to reduce the steep adoption curve for new developers.
+                        <u>Reverse engineered Schema from C# enums of a tool</u>, to reduce the steep adoption curve for all stake holders.
                         Mentored them doing code reviews & enforcing best practices using linting, style guides & low code patterns.
                     </li>
                     <li> 
