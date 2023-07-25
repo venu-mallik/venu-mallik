@@ -123,16 +123,17 @@ export default function PersonalInfo() {
                     </li>
                     <li>
                         Lead the Code quality reviews and optimisation, <u>reduced from 10k lines to 2k lines of code and saved 45 minutes execution time in a ETL project.</u>
+                        <br></br>
                         the total execution time is brought down from 2 Hours to 1 Hour 10 Minutes .
                     </li>
                     <li>
-                        <u>Reverse engineered Schema from C# enums of prop tool</u> to reduce the steep adoption curve for all stake holders.
+                        <u>Reverse engineered Schema from C# enums of prop tool</u> to reduce the steep adoption curve for all stake holders.<br></br>
                         Mentored them doing code reviews & enforcing best practices using linting, style guides & low code patterns.
                     </li>
                     <li> 
                     <a target="_blank" href="/stack.png">Popular libraries</a> shows comparision of adoption between FastAPI, Django, Flask, Expressjs, NextJS, AntD.
                     </li>
-                    <li> I have production ready experience with FastAPI,AntD, NextJS, Express JS to build full stack applications </li>
+                    <li> I have production ready experience with FastAPI,AntD, NextJS, Express JS to build full stack applications. </li>
                 </ul>
 
 
@@ -148,6 +149,11 @@ export default function PersonalInfo() {
                     </li>                
                     <li> <a href="https://citygrid.pages.dev" target="_blank" >Cities & Geodistance btw them</a>
                     </li>
+
+                     <h3>Learning</h3>
+                     <a href="https://learn.microsoft.com/en-US/users/venumallikbellamkonda-3675/transcript/dlgo1hnq9j0x9zw" target="_blank">Innominds Microsoft Learning - 2022</a>
+                     <a href="https://www.credly.com/badges/5a775754-506d-4cf6-b5f6-6358b428bac0" target="_blank">Oracle Java Certified - 2017</a>
+                     <a href="https://drive.google.com/file/d/1XFj9w30oqBA6LT_371lz-PykZ6GHaFBI/view?usp=sharing" target="_blank">Hadoop Intership - 2015</a>
                 </ul>
             }
             </div>
