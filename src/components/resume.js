@@ -151,9 +151,12 @@ export default function PersonalInfo() {
                     </li>
 
                      <h3>Learning</h3>
-                     <a href="https://learn.microsoft.com/en-US/users/venumallikbellamkonda-3675/transcript/dlgo1hnq9j0x9zw" target="_blank">Innominds Microsoft Learning - 2022</a>
-                     <a href="https://www.credly.com/badges/5a775754-506d-4cf6-b5f6-6358b428bac0" target="_blank">Oracle Java Certified - 2017</a>
-                     <a href="https://drive.google.com/file/d/1XFj9w30oqBA6LT_371lz-PykZ6GHaFBI/view?usp=sharing" target="_blank">Hadoop Intership - 2015</a>
+                     <li><a href="https://learn.microsoft.com/en-US/users/venumallikbellamkonda-3675/transcript/dlgo1hnq9j0x9zw" target="_blank">Innominds Microsoft Learning - 2022</a>
+                     </li>
+                     <li><a href="https://www.credly.com/badges/5a775754-506d-4cf6-b5f6-6358b428bac0" target="_blank">Oracle Java Certified - 2017</a>
+                     </li>
+                     <li><a href="https://drive.google.com/file/d/1XFj9w30oqBA6LT_371lz-PykZ6GHaFBI/view?usp=sharing" target="_blank">Hadoop Intership - 2015</a>
+                     </li>
                 </ul>
             }
             </div>
