@@ -43,7 +43,7 @@ export default function PersonalInfo() {
                 <Descriptions.Item label="Address">
                     Vijayawada , Andhra Pradesh, India
                 </Descriptions.Item>
-                <Descriptions.Item label="Links"><a target="_blank" href={"https://www.github.com/vrworkers"} > Github </a>,&nbsp;<a  target="_blank" href={"https://www.linkedin.com/in/venumallik"} >Linkedin</a>&nbsp; <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a></Descriptions.Item>
+                <Descriptions.Item label="Links"><a target="_blank" href={"https://www.github.com/vrworkers"} > Github </a>,&nbsp;<a  target="_blank" href={"https://www.linkedin.com/in/venumallik"} >Linkedin</a>, &nbsp;<a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a></Descriptions.Item>
                 <Descriptions.Item label="Education">Information tech, JNTU Kakinada 2012-16 </Descriptions.Item>
                 <Descriptions.Item label="Experience">
                 {expmap[exp]} &nbsp;&nbsp;<Segmented options={[ 'Weeks', 'Months', 'Years']} size="small"  onChange={(v)=>setExp(v)} >
@@ -61,7 +61,7 @@ export default function PersonalInfo() {
                         })}
             </Descriptions>
 
-            <Segmented options={[ 'Leadership', 'Backend', 'Frontend', 'Databases', 'Devops', 'Websites']} size="small"
+            <Segmented options={[ 'Leadership', 'Backend', 'Frontend', 'Databases', 'Devops', 'Websites', 'Experience']} size="small"
               onChange={(v)=>setFlag(v)} > </Segmented>
               <div>
             {
@@ -117,18 +117,19 @@ export default function PersonalInfo() {
             {
                 flag === 'Leadership' &&
                 <ul style={ulStyle} >
-                    <li> Lead a team in query optimisation, reducing the redundant joins & sub queries.
-                    </li>
-                    <li> Microservices & frontend developer collaborating with one designer, android, ios developer in a team of 5.
+                    <li> Microservices & frontend developer guiding/mentoring with one designer, android, ios developer in a team of 5.
                     </li>
                     <li>
-                        Lead the Code quality reviews and optimisation, <u>reduced from 10k lines to 2k lines of code and saved 45 minutes execution time in a ETL project.</u>
+                        Lead the Code quality reviews and optimisation, <u>reduced from 10000 lines to 2000 lines of code and saved 45 minutes execution time in a ETL project.</u>
                         <br></br>
                         the total execution time is brought down from 2 Hours to 1 Hour 10 Minutes .
                     </li>
                     <li>
                         <u>Reverse engineered Schema from C# enums of prop tool</u> to reduce the steep adoption curve for all stake holders.<br></br>
                         Mentored them doing code reviews & enforcing best practices using linting, style guides & low code patterns.
+                    </li>
+                    <li> 
+                        Lead a team in query optimisation, reducing the redundant joins & sub queries.
                     </li>
                     <li> 
                     <a target="_blank" href="/stack.png">Popular libraries</a> shows comparision of adoption between FastAPI, Django, Flask, Expressjs, NextJS, AntD.
@@ -142,25 +143,33 @@ export default function PersonalInfo() {
             {
                 flag === 'Websites' && 
                 <ul style={ulStyle} >
-                    <li> The following are Professional and other websites i worked on </li>
-                    <li> <a href="https://minipix.in" target="_blank" >React OTT website in a previous company i am part of</a>
-                    </li>
-                    <li> <a href="https://minipix-api.ibee.ai/docs" target="_blank" >Fastapi api supporting above react website</a>
+                    <li> Lead Full stack developer of <a href="https://minipix.in" target="_blank" >OTT website </a> consuming 
+                     <a href="https://minipix-api.ibee.ai/docs" target="_blank" > FastAPI </a> in a team of 5.
                     </li>                
                     <li> <a href="https://citygrid.pages.dev" target="_blank" >Cities, Climate and invisible impacts on health W.I.P</a>
                     </li>
-
                      <h3>Learning</h3>
                      <li><a href="https://learn.microsoft.com/en-US/users/venumallikbellamkonda-3675/transcript/dlgo1hnq9j0x9zw" target="_blank">Innominds Microsoft Learning - 2022</a>
                      </li>
                      <li><a href="https://www.credly.com/badges/5a775754-506d-4cf6-b5f6-6358b428bac0" target="_blank">Oracle Java Certified - 2017</a>
                      </li>
-                     <li><a href="https://drive.google.com/file/d/1XFj9w30oqBA6LT_371lz-PykZ6GHaFBI/view?usp=sharing" target="_blank">Hadoop Intership - 2015</a>
+                     <li><a href="https://drive.google.com/file/d/1XFj9w30oqBA6LT_371lz-PykZ6GHaFBI/view?usp=sharing" target="_blank">Hadoop Training - 2015</a>
                      </li>
                      <li>B.Tech / Information Technology:2016 - 86% </li>
                      <li>12th / Plus 2 : 2011  - 83%</li>
                      <li>10th Class/SSC : 2009 - 86%</li>
                 </ul>
+            }
+            {
+                flag === 'Experience' && 
+                        <ul style={ulStyle}> 
+                            <li>Tata Consultancy services - Selected from the campus: 2016 August to 2018 May</li>
+                            <li> Remote Python developer at <a href="https://www.linkedin.com/company/insisiv-labs/?originalSubdomain=in" target="_blank"> Insisiv labs </a> : 2018 June to 2018 August</li>
+                            <li> Freelance Developer : 2018 August to  2020 August </li>
+                            <li> Python Developer at <a href="https://www.linkedin.com/company/kremlin-tech-ventures/about/" target="_blank"> Kremlin Tech </a> for two months, a affiliate of IBEE software solutions</li>
+                            <li> Remote Senior engineer at IBEE software solutions pvt ltd : Jan 2021 - July 2022</li>
+                            <li> Remote Senior software engineer at Innominds software pvt ltd : July 2022 - Present  </li>
+                        </ul>           
             }
             </div>
 
