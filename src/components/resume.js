@@ -157,9 +157,9 @@ export default function PersonalInfo() {
                      </li>
                      <li><a href="https://drive.google.com/file/d/1XFj9w30oqBA6LT_371lz-PykZ6GHaFBI/view?usp=sharing" target="_blank">Hadoop Intership - 2015</a>
                      </li>
-                     <li>B.Tech - Information Technology - 86% </li>
-                     <li>12th / Plus 2  - 83%</li>
-                     <li>10th Class/SSC - 86%</li>
+                     <li>B.Tech / Information Technology:2016 - 86% </li>
+                     <li>12th / Plus 2 : 2011  - 83%</li>
+                     <li>10th Class/SSC : 2009 - 86%</li>
                 </ul>
             }
             </div>
