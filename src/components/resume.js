@@ -147,7 +147,7 @@ export default function PersonalInfo() {
                     </li>
                     <li> <a href="https://minipix-api.ibee.ai/docs" target="_blank" >Fastapi api supporting above react website</a>
                     </li>                
-                    <li> <a href="https://citygrid.pages.dev" target="_blank" >Cities & Geodistance btw them</a>
+                    <li> <a href="https://citygrid.pages.dev" target="_blank" >Cities, Climate and invisible impacts on health W.I.P</a>
                     </li>
 
                      <h3>Learning</h3>
@@ -157,6 +157,9 @@ export default function PersonalInfo() {
                      </li>
                      <li><a href="https://drive.google.com/file/d/1XFj9w30oqBA6LT_371lz-PykZ6GHaFBI/view?usp=sharing" target="_blank">Hadoop Intership - 2015</a>
                      </li>
+                     <li>B.Tech - Information Technology - 86% </li>
+                     <li>12th / Plus 2  - 83%</li>
+                     <li>10th Class/SSC - 86%</li>
                 </ul>
             }
             </div>
