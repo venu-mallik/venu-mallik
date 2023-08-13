@@ -151,7 +151,10 @@ export default function PersonalInfo() {
                      <h3>Learning</h3>
                      <li><a href="https://learn.microsoft.com/en-US/users/venumallikbellamkonda-3675/transcript/dlgo1hnq9j0x9zw" target="_blank">Innominds Microsoft Learning - 2022</a>
                      </li>
-                     <li><a href="https://www.credly.com/badges/5a775754-506d-4cf6-b5f6-6358b428bac0" target="_blank">Oracle Java Certified - 2017</a>
+                     <li><a href="/IZO-851.pdf" target="_blank">Java Standard Edition 6 Programmer Certified Professional</a>
+                     </li>
+                     
+                     <li><a href="/IZO-897.pdf" target="_blank">Java Platform, Enterprise Edition 6 Web Services Developer Certified Expert Exam</a>
                      </li>
                      <li><a href="https://drive.google.com/file/d/1XFj9w30oqBA6LT_371lz-PykZ6GHaFBI/view?usp=sharing" target="_blank">Hadoop Training - 2015</a>
                      </li>
