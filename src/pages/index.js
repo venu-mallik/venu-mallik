@@ -139,88 +139,10 @@ export default function Home() {
     <main>{!isSSREnabled() ?
       <>
         <Layout>
-          <Layout.Header
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            <div className="demo-logo" />
-            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[activeTab]} items={tabsList}
-              onClick={(e) => { setActiveTab(e.key) }} />
-          </Layout.Header>
           <Layout.Content>
             {
               activeTab == -1 && <PersonalInfo/>
             } 
-            {activeTab > 0 && <Row>
-              <Col>
-                <Select style={{ width: '500px' }}
-                  mode='tags' placeholder={'Select Bodies'} allowClear showSearch
-                  value={selectedBodies} onChange={(v) => setselectedBodies(v)} >
-                  {[...bodies, 'rahu','ketu'].map((b, _) => {
-                    return <Select.Option key={b} >{b}</Select.Option>
-                  })}
-                </Select>
-              </Col>
-
-              <Col> <Select showSearch onChange={(value) => { console.log(value); setyear(value); }}
-                style={{ width: 100 }} value={year} placeholder={'year'} >
-                {
-                  Array(2500).fill().map((_, i) => {
-                    return <Select.Option value={i} key={i} >{i}</Select.Option>
-                  })}
-              </Select>
-                <Select showSearch placeholder={'resolution'} value={res} onChange={(v) => setRes(v)} >
-                  <Select.Option key={"15min"} value={1 / (4 * 24)}>{"15 Min"}</Select.Option>
-                  <Select.Option key={"1Hour"} value={1 / 24}>{"1 Hour"}</Select.Option>
-                  <Select.Option key={"1d"} value={1}>{"1 Day"}</Select.Option>
-                  <Select.Option key={"7d"} value={7}>{"7 Day"}</Select.Option>
-                  <Select.Option key={"15d"} value={15}>{"15 Day"}</Select.Option>
-                  <Select.Option key={"30d"} value={30}>{"30 Day"}</Select.Option>
-                  <Select.Option key={"60d"} value={60}>{"60 Day"}</Select.Option>
-                  <Select.Option key={"90d"} value={90}>{"90 Day"}</Select.Option>
-                  <Select.Option key={"180d"} value={180}>{"180 Day"}</Select.Option>
-                </Select>
-              </Col>
-
-              <Col><Select showSearch placeholder={'Points to plot'} value={points} onChange={(v) => setPoints(v)} >
-                  <Select.Option key={"200p"} value={200}>{200}</Select.Option>
-                  <Select.Option key={"500p"} value={500}>{500}</Select.Option>
-                  <Select.Option key={"1000p"} value={1000}>{1000}</Select.Option>
-                  <Select.Option key={"2500p"} value={2500}>{2500}</Select.Option>
-                  <Select.Option key={"5000p"} value={5000}>{5000}</Select.Option>
-                </Select>
-              </Col>
-
-            </Row>}
-                  
-             <div id="vis"></div>
-
-            {activeTab > 0 && activeTab <= 8 && <Table dataSource={data} >
-              <Table.Column dataIndex={'time'} title={'time'} render={(v, _) => v.toISOString().slice(0,10) }></Table.Column>
-              {
-                selectedBodies.map((b) => {
-                  return <Table.Column dataIndex={b} title={b} key={b} ></Table.Column>
-                })
-              }
-
-              <Table.Column dataIndex={'solareclipse'} title={'solareclipse'} render={(v, _) => v} ></Table.Column>
-              <Table.Column dataIndex={'lunareclipse'} title={'lunareclipse'} render={(v, _) => v} ></Table.Column>
-
-            </Table>
-            }
-            {/*<div>
-                {orbitals.map((b)=>{
-                  return orbitals.map((c)=>{
-
-                      return <p> {b} {PlanetOrbitalPeriod(b)} {c}  {PlanetOrbitalPeriod(c)}  {PlanetOrbitalPeriod(b)/PlanetOrbitalPeriod(c)}  </p>    
-
-                })
-                })}
-
-            </div> */}
-
 
           </Layout.Content>
         </Layout></>

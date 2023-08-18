@@ -1,4 +1,4 @@
-import { Descriptions, Progress, Layout, Segmented } from "antd"
+import { Descriptions, Progress, Layout, Segmented, Menu, Divider } from "antd"
 import { useState } from "react";
 
 export default function PersonalInfo() {
@@ -30,39 +30,18 @@ export default function PersonalInfo() {
 
     return (
         <Layout >
-            <Content style={{backgroundColor:'white' , padding:"2%" , height: "90vh"}}>
-            <h3 style={{backgroundColor:'white', fontStyle : 'oblique', font : "initial" }}  > Welcome, I am a
-            Senior engineer at an MNC. <br></br>
-            Have a great deal of experience in full stack development and Data engineering.
-            <br></br>
-            Prefer remote jobs, temporarily okay to travel.
-            </h3>
-            <Descriptions title={""} layout="horizontal" size="small"  column={{ xxl: 4, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }}>
-                <Descriptions.Item label="Email">venu.mallik@gmail.com</Descriptions.Item>
-                <Descriptions.Item label="Telephone">+91 98859 20369</Descriptions.Item>
-                <Descriptions.Item label="Address">
-                    Vijayawada , Andhra Pradesh, India
-                </Descriptions.Item>
-                <Descriptions.Item label="Links"><a target="_blank" href={"https://www.github.com/vrworkers"} > Github </a>,&nbsp;<a  target="_blank" href={"https://www.linkedin.com/in/venumallik"} >Linkedin</a>, &nbsp;<a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a></Descriptions.Item>
-                <Descriptions.Item label="Education">Information tech, JNTU Kakinada 2012-16 </Descriptions.Item>
-                <Descriptions.Item label="Experience">
-                {expmap[exp]} &nbsp;&nbsp;<Segmented options={[ 'Weeks', 'Months', 'Years']} size="small"  onChange={(v)=>setExp(v)} >
-                 </Segmented>  </Descriptions.Item>
-                
-            </Descriptions>
-            <Descriptions title={""} size="small" layout="horizontal"  column={{ xxl: 4, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }} >
-                { Object.entries(skills).map(([k,v],i) => 
-                            {
-    
-                                return <Descriptions.Item label={k} key={i}>
-                                    <Progress type="circle" percent={v*20} size={30} />
-                                </Descriptions.Item>
-                                
-                        })}
-            </Descriptions>
-
-            <Segmented options={[ 'Leadership', 'Backend', 'Frontend', 'Databases', 'Devops', 'Websites', 'Experience']} size="small"
-              onChange={(v)=>setFlag(v)} > </Segmented>
+            
+          <Layout.Header
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <div className="demo-logo" />
+            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[flag]} items={[ 'Leadership', 'Backend', 'Frontend', 'Databases', 'Devops', 'Websites', 'Experience'].map((a)=> ({'key' : a, 'label': a}) )}
+              onClick={(e) => { setFlag(e.key) }} />
+          </Layout.Header>
+            <Content style={{backgroundColor:'white' , padding:"2%" , height: "90vh"}}> 
               <div>
             {
                 flag === 'Backend' && 
@@ -175,6 +154,32 @@ export default function PersonalInfo() {
                         </ul>           
             }
             </div>
+            <Divider></Divider>
+            <Descriptions title={""} layout="horizontal" size="small"  column={{ xxl: 3, xl: 2, lg: 2, md: 2, sm: 1, xs: 1 }}>
+                <Descriptions.Item label="Email">venu.mallik@gmail.com</Descriptions.Item>
+                <Descriptions.Item label="Telephone">+91 98859 20369</Descriptions.Item>
+                <Descriptions.Item label="Address">
+                    Vijayawada , Andhra Pradesh, India
+                </Descriptions.Item>
+                <Descriptions.Item label="Links"><a target="_blank" href={"https://www.github.com/vrworkers"} > Github </a>,&nbsp;<a  target="_blank" href={"https://www.linkedin.com/in/venumallik"} >Linkedin</a>, &nbsp;<a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a></Descriptions.Item>
+                <Descriptions.Item label="Education">Information tech, JNTU Kakinada 2012-16 </Descriptions.Item>
+                <Descriptions.Item label="Experience">
+                {expmap[exp]} &nbsp;&nbsp;<Segmented options={[ 'Weeks', 'Months', 'Years']} size="small"  onChange={(v)=>setExp(v)} >
+                 </Segmented>  </Descriptions.Item>
+                
+            </Descriptions>
+            <Divider ></Divider>
+            <Descriptions title={""} size="small" layout="horizontal"  column={{ xxl: 3, xl: 2, lg: 2, md: 2, sm: 1, xs: 1 }} >
+                { Object.entries(skills).map(([k,v],i) => 
+                            {
+    
+                                return <Descriptions.Item label={k} key={i}>
+                                    <Progress type="circle" percent={v*20} size={30} />
+                                </Descriptions.Item>
+                                
+                        })}
+            </Descriptions>
+
 
         </Content>
     </Layout> 
