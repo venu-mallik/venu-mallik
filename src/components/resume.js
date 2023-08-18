@@ -38,7 +38,7 @@ export default function PersonalInfo() {
             }}
           >
             <div className="demo-logo" />
-            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[flag]} items={[ 'Leadership', 'Backend', 'Frontend', 'Databases', 'Devops', 'Websites', 'Experience'].map((a)=> ({'key' : a, 'label': a}) )}
+            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[flag]} items={[ 'Leadership', 'Backend', 'Frontend', 'Databases', 'Cloud', 'Education', 'Experience'].map((a)=> ({'key' : a, 'label': a}) )}
               onClick={(e) => { setFlag(e.key) }} />
           </Layout.Header>
             <Content style={{backgroundColor:'white' , padding:"2%" , height: "90vh"}}> 
@@ -78,11 +78,11 @@ export default function PersonalInfo() {
                             <br></br></li>
                             <li>
                             Production experience in using Oracle, MySQL and MongoDB in building Rest APIs. </li><li>
-                            Extracting Reports fromm google analytics using BigQuery. <br></br></li>
+                            Extracting Reports from google analytics using BigQuery. <br></br></li>
                         </ul>            
             }
             {
-                flag === 'Devops' && 
+                flag === 'Cloud' && 
                         <ul style={ulStyle}> 
                             <li>Experience in using S3 API , Open Stack Upload API, google buckets etc. <br></br></li><li>
                             Experience using Azure devops for CI/CD and task tracking. <br></br></li><li>
@@ -96,19 +96,34 @@ export default function PersonalInfo() {
             {
                 flag === 'Leadership' &&
                 <ul style={ulStyle} >
-                    <li> Microservices & frontend developer guiding/mentoring with one designer, android, ios developer in a team of 5.
+                    <li>
+                        Innominds - Data engineering project at Energy Exemplar
+                        <ol>
+                            <li>Lead the Code reviews and optimisation, reduced codebase from 10000 lines to 2000 lines of code and saved 45 minutes execution time.</li>
+                            <li> the total execution time is brought down from 2 Hours to 1 Hour 10 Minutes .</li>
+                    
+                            <li>Reverse engineered Schema from C# enums of prop tool to reduce the steep adoption curve and save time for all stake holders.</li>
+                            <li>100+ Pydantic classes with 1500+ memberships and 4000+ properties are auto generated using Json Schema and Enum rules .</li>
+                        </ol>
+                    </li>
+                    
+                    <li> Lead Full stack developer of <a href="https://minipix.in" target="_blank" >OTT website </a> consuming 
+                     <a href="https://minipix-api.ibee.ai/docs" target="_blank" > FastAPI </a> in a team of 5 at IBEE software solutions from 2021 to 2022.
+                            <ol> 
+                                <li>Manager</li>
+                                <li>Tech Lead CI/CD, production and Video Engineering</li>
+                                <li>Me - Lead Full stack developer</li>
+                                <li>Desinger - UI/UX</li>
+                                <li> Android developer</li>
+                            </ol>
                     </li>
                     <li>
-                        Lead the Code quality reviews and optimisation, <u>reduced from 10000 lines to 2000 lines of code and saved 45 minutes execution time in a ETL project.</u>
-                        <br></br>
-                        the total execution time is brought down from 2 Hours to 1 Hour 10 Minutes .
-                    </li>
-                    <li>
-                        <u>Reverse engineered Schema from C# enums of prop tool</u> to reduce the steep adoption curve for all stake holders.<br></br>
-                        Mentored them doing code reviews & enforcing best practices using linting, style guides & low code patterns.
-                    </li>
-                    <li> 
-                        Lead a team in query optimisation, reducing the redundant joins & sub queries.
+                         TCS - Retiring proprietary tool in favour of open source at USAA.
+                        <ol>
+                            <li>The project is to reverse engineer 500+ screens of progress 4GL into Java wicket screens</li>
+                            <li> The database is migrated from optim to oracle</li>
+                            <li>Lead a team in query optimisation, reducing the redundant joins & sub queries.</li>
+                        </ol> 
                     </li>
                     <li> 
                     <a target="_blank" href="/stack.png">Popular libraries</a> shows comparision of adoption between FastAPI, Django, Flask, Expressjs, NextJS, AntD.
@@ -120,11 +135,9 @@ export default function PersonalInfo() {
             }
 
             {
-                flag === 'Websites' && 
+                flag === 'Education' && 
                 <ul style={ulStyle} >
-                    <li> Lead Full stack developer of <a href="https://minipix.in" target="_blank" >OTT website </a> consuming 
-                     <a href="https://minipix-api.ibee.ai/docs" target="_blank" > FastAPI </a> in a team of 5.
-                    </li>                
+                                    
                     <li> <a href="https://citygrid.pages.dev" target="_blank" >Cities, Climate and invisible impacts on health W.I.P</a>
                     </li>
                      <h3>Learning</h3>
