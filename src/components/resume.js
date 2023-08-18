@@ -140,6 +140,13 @@ export default function PersonalInfo() {
                                     
                     <li> <a href="https://citygrid.pages.dev" target="_blank" >Cities, Climate and invisible impacts on health W.I.P</a>
                     </li>
+                    <li>
+                        Free lance data engineering project with a lot of domain knowledge involved : <a href="https://github.com/vrworkers/Astrodata">Timeseries Analysis</a>
+                    </li>
+                    <li>Samples built in tasks <a href="https://github.com/vrworkers/lambda-s3-dynamo" target="_blank">Aws lambda Sample</a> ,
+                         <a href="https://github.com/vrworkers/Auth0_Fastapi" target="_blank">FastAPI with Auth0</a> ,
+                         <a href="https://github.com/vrworkers/Fastapi-sample-with-redis" target="_blank">FastAPI with redis</a>
+                    </li>
                      <h3>Learning</h3>
                      <li><a href="https://learn.microsoft.com/en-US/users/venumallikbellamkonda-3675/transcript/dlgo1hnq9j0x9zw" target="_blank">Innominds Microsoft Learning - 2022</a>
                      </li>
@@ -158,7 +165,7 @@ export default function PersonalInfo() {
             {
                 flag === 'Experience' && 
                         <ul style={ulStyle}> 
-                            <li>Tata Consultancy services - Selected from the campus: 2016 August to 2018 May</li>
+                            <li>Tata Consultancy services - Selected via codevita, served from 2016 August to 2018 May</li>
                             <li> Remote Python developer at <a href="https://www.linkedin.com/company/insisiv-labs/?originalSubdomain=in" target="_blank"> Insisiv labs </a> : 2018 June to 2018 August</li>
                             <li> Freelance Developer : 2018 August to  2020 August </li>
                             <li> Python Developer at <a href="https://www.linkedin.com/company/kremlin-tech-ventures/about/" target="_blank"> Kremlin Tech </a> for two months, a affiliate of IBEE software solutions</li>
@@ -168,7 +175,8 @@ export default function PersonalInfo() {
             }
             </div>
             <Divider></Divider>
-            <Descriptions title={""} layout="horizontal" size="small"  column={{ xxl: 3, xl: 2, lg: 2, md: 2, sm: 1, xs: 1 }}>
+            <Descriptions title={"Contact Information"} layout="horizontal" size="small"  column={{ xxl: 3, xl: 2, lg: 2, md: 2, sm: 1, xs: 1 }}>
+                <Descriptions.Item label="Name">Venu Mallik Bellamkonda</Descriptions.Item>
                 <Descriptions.Item label="Email">venu.mallik@gmail.com</Descriptions.Item>
                 <Descriptions.Item label="Telephone">+91 98859 20369</Descriptions.Item>
                 <Descriptions.Item label="Address">
@@ -182,7 +190,7 @@ export default function PersonalInfo() {
                 
             </Descriptions>
             <Divider ></Divider>
-            <Descriptions title={""} size="small" layout="horizontal"  column={{ xxl: 3, xl: 2, lg: 2, md: 2, sm: 1, xs: 1 }} >
+            <Descriptions title={"Skills"} size="small" layout="horizontal"  column={{ xxl: 3, xl: 2, lg: 2, md: 2, sm: 1, xs: 1 }} >
                 { Object.entries(skills).map(([k,v],i) => 
                             {
     
