@@ -148,6 +148,10 @@ export default function PersonalInfo() {
                          <a href="https://github.com/vrworkers/Fastapi-sample-with-redis" target="_blank">FastAPI with redis</a>
                     </li>
                      <h3>Learning</h3>
+                     
+                     
+                     <li><a href="https://www.hackerrank.com/vrworkers" target="_blank">Hacker Rank certifications</a>
+                     </li>
                      <li><a href="https://learn.microsoft.com/en-US/users/venumallikbellamkonda-3675/transcript/dlgo1hnq9j0x9zw" target="_blank">Innominds Microsoft Learning - 2022</a>
                      </li>
                      <li><a href="/IZO-851.pdf" target="_blank">Java Standard Edition 6 Programmer Certified Professional</a>
