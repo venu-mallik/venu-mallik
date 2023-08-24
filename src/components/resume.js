@@ -80,7 +80,7 @@ export default function PersonalInfo() {
                             Production experience in using Oracle, MySQL and MongoDB in building Rest APIs. </li><li>
                             Extracting Reports from google analytics using BigQuery. <br></br></li>
                             <li>Advanced Pandas developer including Window function, Pivot, Melt, MultiIndex etc</li>
-                            <li>Advanced Hacker rank SQL certified</li>
+                            <li>Hacker Rank  Advanced SQL certified with expertise in CTE, Rank etc queries</li>
                             <li> Data visualisation expert using Vega-lite, Matplotlib, Leaflet js, Bokeh etc </li>
                         </ul>            
             }
