@@ -187,7 +187,7 @@ export default function PersonalInfo() {
                     Vijayawada , Andhra Pradesh, India
                 </Descriptions.Item>
                 <Descriptions.Item label="Links"><a target="_blank" href={"https://www.github.com/vrworkers"} > Github </a>,&nbsp;<a  target="_blank" href={"https://www.linkedin.com/in/venumallik"} >Linkedin</a>, &nbsp;<a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a></Descriptions.Item>
-                <Descriptions.Item label="Education">Information tech, JNTU Kakinada 2012-16 </Descriptions.Item>
+                <Descriptions.Item label="Education">Information technology 2012-16 </Descriptions.Item>
                 <Descriptions.Item label="Experience">
                 {expmap[exp]} &nbsp;&nbsp;<Segmented options={[ 'Weeks', 'Months', 'Years']} size="small"  onChange={(v)=>setExp(v)} >
                  </Segmented>  </Descriptions.Item>
