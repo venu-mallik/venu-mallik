@@ -21,8 +21,9 @@ export default function PersonalInfo() {
 
     const skills = {
         "Python & FastAPI" : 4.5,
+        "MySQL" : 4.5,
         "Pandas & Data Visualisation": 4,
-        "MySQL & Mongo DB" : 4,
+        "MongoDB" : 4,
         "Javascript & (ReactJS, Next JS)": 3.75,
         "S3, SES API, Open Stack, Google Firebase" : 3.5,
         "Devops, Queues & Caching" : 3
