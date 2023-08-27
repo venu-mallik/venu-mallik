@@ -38,7 +38,7 @@ export default function PersonalInfo() {
             }}
           >
             <div className="demo-logo" />
-            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[flag]} items={[ 'Leadership', 'Backend', 'Frontend', 'Databases', 'Cloud', 'Education', 'Experience'].map((a)=> ({'key' : a, 'label': a}) )}
+            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[flag]} items={[ 'Leadership', 'Backend', 'Frontend', 'Databases', 'Cloud', 'Cerifications', 'Experience'].map((a)=> ({'key' : a, 'label': a}) )}
               onClick={(e) => { setFlag(e.key) }} />
           </Layout.Header>
             <Content style={{backgroundColor:'white' , padding:"2%" , height: "90vh"}}> 
@@ -138,7 +138,7 @@ export default function PersonalInfo() {
             }
 
             {
-                flag === 'Education' && 
+                flag === 'Cerifications' && 
                 <ul style={ulStyle} >
                                     
                     <li> <a href="https://citygrid.pages.dev" target="_blank" >Cities, Climate and invisible impacts on health W.I.P</a>
