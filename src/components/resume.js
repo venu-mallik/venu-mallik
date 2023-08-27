@@ -152,7 +152,7 @@ export default function PersonalInfo() {
                     <li>Tata Consultancy services - Selected via codevita, served from 2016 August to 2018 May</li>
 
                     <h3>Portfolio</h3>                                    
-                    <li> <a href="https://time-8ch.pages.dev" target="_blank" >Cities, Climate and invisible impacts on health W.I.P</a>
+                    <li> <a href="https://climate.pages.dev" target="_blank" >Cities, Climate and invisible impacts on health W.I.P</a>
                     </li>
                     <li>
                         Free lance data engineering project using pandas and advanced <a href="https://github.com/vrworkers/Astrodata">Timeseries Analysis</a>
