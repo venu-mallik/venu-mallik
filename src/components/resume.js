@@ -1,5 +1,6 @@
 import { Descriptions, Progress, Layout, Segmented, Menu, Divider } from "antd"
 import { useState } from "react";
+import { MenuOutlined } from '@ant-design/icons';
 
 export default function PersonalInfo() {
 
@@ -32,15 +33,14 @@ export default function PersonalInfo() {
     return (
         <Layout >
             
-          <Layout.Header
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
+          <Layout.Header>
             <div className="demo-logo" />
-            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[flag]} items={[ 'Leadership', 'Backend', 'Frontend', 'Databases', 'Cloud', 'Cerifications'].map((a)=> ({'key' : a, 'label': a}) )}
-              onClick={(e) => { setFlag(e.key) }} />
+            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[flag]} 
+            items={[ 'Leadership', 'Backend', 'Frontend', 'Databases', 'Cloud',
+             'Cerifications'].map((a)=> ({'key' : a, 'label': a}) )}
+              overflowedIndicator={<MenuOutlined/>}
+              onClick={(e) => { setFlag(e.key) }} 
+            />
           </Layout.Header>
             <Content style={{backgroundColor:'white' , padding:"2%" , height: "90vh"}}> 
               <div>

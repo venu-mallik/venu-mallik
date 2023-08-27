@@ -138,14 +138,11 @@ export default function Home() {
   return (
     <main>{!isSSREnabled() ?
       <>
-        <Layout>
-          <Layout.Content>
             {
               activeTab == -1 && <PersonalInfo/>
             } 
 
-          </Layout.Content>
-        </Layout></>
+        </>
       : null}</main>
   )
 }
