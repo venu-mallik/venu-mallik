@@ -38,7 +38,7 @@ export default function PersonalInfo() {
             }}
           >
             <div className="demo-logo" />
-            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[flag]} items={[ 'Leadership', 'Backend', 'Frontend', 'Databases', 'Cloud', 'Cerifications', 'Experience'].map((a)=> ({'key' : a, 'label': a}) )}
+            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[flag]} items={[ 'Leadership', 'Backend', 'Frontend', 'Databases', 'Cloud', 'Cerifications'].map((a)=> ({'key' : a, 'label': a}) )}
               onClick={(e) => { setFlag(e.key) }} />
           </Layout.Header>
             <Content style={{backgroundColor:'white' , padding:"2%" , height: "90vh"}}> 
@@ -140,11 +140,21 @@ export default function PersonalInfo() {
             {
                 flag === 'Cerifications' && 
                 <ul style={ulStyle} >
-                                    
+
+                    <h3>Experience </h3>
+
+                    <li> Remote Senior software engineer at Innominds software pvt ltd : July 2022 - Present  </li>
+                    <li> Remote Senior engineer at IBEE software solutions pvt ltd : Jan 2021 - July 2022</li>
+                    <li> Python Developer at <a href="https://www.linkedin.com/company/kremlin-tech-ventures/about/" target="_blank"> Kremlin Tech </a> for two months, a affiliate of IBEE software solutions</li>
+                    <li> Freelance Developer : 2018 August to  2020 August </li>
+                    <li> Remote Python developer at <a href="https://www.linkedin.com/company/insisiv-labs/?originalSubdomain=in" target="_blank"> Insisiv labs </a> : 2018 June to 2018 August</li>
+                    <li>Tata Consultancy services - Selected via codevita, served from 2016 August to 2018 May</li>
+
+                    <h3>Portfolio</h3>                                    
                     <li> <a href="https://citygrid.pages.dev" target="_blank" >Cities, Climate and invisible impacts on health W.I.P</a>
                     </li>
                     <li>
-                        Free lance data engineering project with a lot of domain knowledge involved : <a href="https://github.com/vrworkers/Astrodata">Timeseries Analysis</a>
+                        Free lance data engineering project using pandas and advanced <a href="https://github.com/vrworkers/Astrodata">Timeseries Analysis</a>
                     </li>
                     <li>Samples built in tasks <a href="https://github.com/vrworkers/lambda-s3-dynamo" target="_blank">Aws lambda Sample</a> ,
                          <a href="https://github.com/vrworkers/Auth0_Fastapi" target="_blank">FastAPI with Auth0</a> ,
@@ -167,18 +177,8 @@ export default function PersonalInfo() {
                      <li>B.Tech / Information Technology:2016 - 86% </li>
                      <li>12th / Plus 2 : 2011  - 83%</li>
                      <li>10th Class/SSC : 2009 - 86%</li>
-                </ul>
-            }
-            {
-                flag === 'Experience' && 
-                        <ul style={ulStyle}> 
-                            <li>Tata Consultancy services - Selected via codevita, served from 2016 August to 2018 May</li>
-                            <li> Remote Python developer at <a href="https://www.linkedin.com/company/insisiv-labs/?originalSubdomain=in" target="_blank"> Insisiv labs </a> : 2018 June to 2018 August</li>
-                            <li> Freelance Developer : 2018 August to  2020 August </li>
-                            <li> Python Developer at <a href="https://www.linkedin.com/company/kremlin-tech-ventures/about/" target="_blank"> Kremlin Tech </a> for two months, a affiliate of IBEE software solutions</li>
-                            <li> Remote Senior engineer at IBEE software solutions pvt ltd : Jan 2021 - July 2022</li>
-                            <li> Remote Senior software engineer at Innominds software pvt ltd : July 2022 - Present  </li>
-                        </ul>           
+
+                    </ul>           
             }
             </div>
             <Divider></Divider>
