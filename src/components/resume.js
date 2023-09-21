@@ -155,16 +155,16 @@ export default function PersonalInfo() {
                     <li> <a href="https://climate.pages.dev" target="_blank" >Cities, Climate and invisible impacts on health W.I.P</a>
                     </li>
                     <li>
-                        Free lance data engineering project using pandas and advanced <a href="https://github.com/vrworkers/Astrodata">Timeseries Analysis</a>
+                        Free lance data engineering project using pandas and advanced <a href="https://github.com/venu-mallik/Astrodata">Timeseries Analysis</a>
                     </li>
-                    <li>Samples built in tasks <a href="https://github.com/vrworkers/lambda-s3-dynamo" target="_blank">Aws lambda Sample</a> ,
-                         <a href="https://github.com/vrworkers/Auth0_Fastapi" target="_blank">FastAPI with Auth0</a> ,
-                         <a href="https://github.com/vrworkers/Fastapi-sample-with-redis" target="_blank">FastAPI with redis</a>
+                    <li>Samples built in tasks <a href="https://github.com/venu-mallik/lambda-s3-dynamo" target="_blank">Aws lambda Sample</a> ,
+                         <a href="https://github.com/venu-mallik/Auth0_Fastapi" target="_blank">FastAPI with Auth0</a> ,
+                         <a href="https://github.com/venu-mallik/Fastapi-sample-with-redis" target="_blank">FastAPI with redis</a>
                     </li>
                      <h3>Learning</h3>
                      
                      
-                     <li><a href="https://www.hackerrank.com/vrworkers" target="_blank">Hacker Rank certifications</a>
+                     <li><a href="https://www.hackerrank.com/venumallik" target="_blank">Hacker Rank certifications</a>
                      </li>
                      <li><a href="https://learn.microsoft.com/en-US/users/venumallikbellamkonda-3675/transcript/dlgo1hnq9j0x9zw" target="_blank">Innominds Microsoft Learning - 2022</a>
                      </li>
@@ -190,7 +190,7 @@ export default function PersonalInfo() {
                 <Descriptions.Item label="Address">
                     Vijayawada , Andhra Pradesh, India
                 </Descriptions.Item>
-                <Descriptions.Item label="Links"><a target="_blank" href={"https://www.github.com/vrworkers"} > Github </a>,&nbsp;<a  target="_blank" href={"https://www.linkedin.com/in/venumallik"} >Linkedin</a>, &nbsp;<a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a></Descriptions.Item>
+                <Descriptions.Item label="Links"><a target="_blank" href={"https://www.github.com/venu-mallik"} > Github </a>,&nbsp;<a  target="_blank" href={"https://www.linkedin.com/in/venumallik"} >Linkedin</a>, &nbsp;<a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a></Descriptions.Item>
                 <Descriptions.Item label="Education">Information technology 2012-16 </Descriptions.Item>
                 <Descriptions.Item label="Experience">
                 {expmap[exp]} &nbsp;&nbsp;<Segmented options={[ 'Weeks', 'Months', 'Years']} size="small" value={exp}  onChange={(v)=>setExp(v)} >
