@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head >
+        <title>Venu Mallik</title>
           <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
         crossorigin=""/>
@@ -13,7 +14,6 @@ export default function Document() {
       </Head>
       <body>
         <Main />
-        {/*<div id="map" style={{height: 400}}></div>*/}
         <NextScript />
       </body>
     </Html>
