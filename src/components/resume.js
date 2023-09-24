@@ -1,4 +1,4 @@
-import { Descriptions, Progress, Layout, Segmented, Menu, Divider } from "antd"
+import { Descriptions, Progress, Layout, Segmented, Menu, Divider, Tag, Space } from "antd"
 import { useState } from "react";
 import { MenuOutlined } from '@ant-design/icons';
 
@@ -19,12 +19,23 @@ export default function PersonalInfo() {
 
     const ulStyle = {display:'grid', gap: '10px', font: ''};
 
+    const percStyle = (v) => {
+        return {
+            height: '25px',
+            border: '2px solid green',
+            borderImage: `linear-gradient(to right, green ${v*20}%, orange ${100-v*20}%)`,
+            borderImageSlice: 1,
+            //background: `linear-gradient(to right, green ${v*20}%, white ${100-v*20}%)`,
+            marginTop: '2px',
+            //textDecoration: 'underline'
+        }
+    }
+
 
     const skills = {
         "Python & FastAPI" : 4.5,
-        "MySQL" : 4.5,
+        "MySQL & MongoDB" : 4,
         "Pandas & Data Visualisation": 4,
-        "MongoDB" : 4,
         "Javascript & (ReactJS, Next JS)": 3.75,
         "S3, SES API, Open Stack, Google Firebase" : 3.5,
         "Devops, Queues & Caching" : 3
@@ -47,9 +58,12 @@ export default function PersonalInfo() {
                 <ul style={ulStyle}> 
                    <li> <a target="_blank" href="/stack.png">Popular libraries</a> shows comparision of adoption between FastAPI, Django, Flask, Expressjs, NextJS, AntD.
                    </li>
-                   <li> I have production ready experience with FastAPI,AntD, NextJS, Express JS to build full stack applications. </li>
                     <li>Confident, can jump start a project using cookiecutter or start templates and move project from wireframes to production in record time.</li>
+                    <li >
+                    {Object.entries(skills).map(([k,v],_) => <Tag style={percStyle(v)}>{k}</Tag>)} 
+                        </li> 
                 </ul>
+                 
             {
                 flag === 'Activity' && 
                     <>
