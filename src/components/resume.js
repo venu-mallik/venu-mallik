@@ -48,7 +48,7 @@ export default function PersonalInfo() {
             <div className="demo-logo" />
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[flag]} 
             items={[ 'Leadership', 'Activity',
-             'Cerifications'].map((a)=> ({'key' : a, 'label': a}) )}
+             'Certifications'].map((a)=> ({'key' : a, 'label': a}) )}
               overflowedIndicator={<MenuOutlined/>}
               onClick={(e) => { setFlag(e.key) }} 
             />
@@ -138,7 +138,7 @@ export default function PersonalInfo() {
             }
 
             {
-                flag === 'Cerifications' && 
+                flag === 'Certifications' && 
                 <>
                 <ul style={ulStyle} >
 
