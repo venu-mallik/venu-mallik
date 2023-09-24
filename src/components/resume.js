@@ -36,7 +36,7 @@ export default function PersonalInfo() {
           <Layout.Header>
             <div className="demo-logo" />
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[flag]} 
-            items={[ 'Leadership', 'Backend', 'Frontend', 'Databases', 'Cloud',
+            items={[ 'Leadership', 'Activity',
              'Cerifications'].map((a)=> ({'key' : a, 'label': a}) )}
               overflowedIndicator={<MenuOutlined/>}
               onClick={(e) => { setFlag(e.key) }} 
@@ -45,21 +45,25 @@ export default function PersonalInfo() {
             <Content style={{backgroundColor:'white' , padding:"2%" , height: "90vh"}}> 
               <div>
             {
-                flag === 'Backend' && 
+                flag === 'Activity' && 
+                    <>
+                    
                         <ul  style={ulStyle} >
+                        <Divider orientation="left">Backend</Divider>
                             <li> Better understanding of Open API & JSON Schema for models.</li><li>
                             Have production scale experience using FastAPI in Python, Jax RS in Java and 
                             hands on experience using express framework in Javascript. </li><li>
                             Oauth2 authentication & experience implementing RBAC, ACL, ABAC authorisation layers. <br></br></li><li>
                             Integrating with third party libraries like Payment gateways, google firebase, cloudflare logs,
-                            resumable or s3 upload protocols for own data storage etc. <br></br></li><li>
-                            Have Professional experience using pandas and data visualization libraries
-                            like Matplotlib, Seaborn, Plotly Dash & Bokeh.</li>
-                        </ul>            
-            }
-            {
-                flag === 'Frontend' && 
-                        <ul style={ulStyle}> 
+                            resumable or s3 upload protocols for own data storage etc. <br></br></li>
+                            <li>
+                            Production experience in using Oracle, MySQL and MongoDB in building Rest APIs. </li><li>
+                            Extracting Reports from google analytics using BigQuery. <br></br></li>
+                            <li>Advanced Pandas developer including Window function, Pivot, Melt, MultiIndex etc</li>
+                            <li> Data visualisation using Vega-lite, Matplotlib, Leaflet js, Bokeh etc </li>
+                                    
+                        <Divider orientation="left">Frontend</Divider>
+                        
                            <li> Production ready Content management systems using React Hooks & Antd framework. <br></br></li>
                            <li>
                             Production ready end user websites using ReactJS , NextJS libraries. <br></br></li>
@@ -69,25 +73,8 @@ export default function PersonalInfo() {
                             <li>
                             Experience in Integrating user facing elements with backend api i.e 
                             particularly owning a feature in all layer and converting design to production.</li>
-
-                        </ul>            
-            }
-            {
-                flag === 'Databases' && 
-                        <ul style={ulStyle}> 
-                           <li> Production experience using sqlalchemy and Motor in Python, JDBC in JAVA for applications. 
-                            <br></br></li>
-                            <li>
-                            Production experience in using Oracle, MySQL and MongoDB in building Rest APIs. </li><li>
-                            Extracting Reports from google analytics using BigQuery. <br></br></li>
-                            <li>Advanced Pandas developer including Window function, Pivot, Melt, MultiIndex etc</li>
-                            <li>Hacker Rank  Advanced SQL certified with expertise in CTE, Rank etc queries</li>
-                            <li> Data visualisation expert using Vega-lite, Matplotlib, Leaflet js, Bokeh etc </li>
-                        </ul>            
-            }
-            {
-                flag === 'Cloud' && 
-                        <ul style={ulStyle}> 
+                                 
+                        <Divider orientation="left">Cloud</Divider>
                             <li>Experience in using S3 API , Open Stack Upload API, google buckets etc. <br></br></li><li>
                             Experience using Azure devops for CI/CD and task tracking. <br></br></li><li>
                             Experience using cloudflare videos & cloudflare images  
@@ -95,7 +82,8 @@ export default function PersonalInfo() {
                             Hands on experience using in house repos i.e onedev, cloudflare pages,
                             google scripts, deploying to Virtual machines in google, pythonanywhere etc. <br></br></li><li>
                             Hands on experience using docker to spin up Minio s3, Redis, RabbitMQ and other services for development.</li>
-                        </ul>            
+                        </ul>          
+                    </>  
             }
             {
                 flag === 'Leadership' &&
@@ -114,11 +102,11 @@ export default function PersonalInfo() {
                     <li> Lead Full stack developer of <a href="https://minipix.in" target="_blank" >OTT website </a> consuming 
                      <a href="https://minipix-api.ibee.ai/docs" target="_blank" > FastAPI </a> in a team of 5 at IBEE software solutions from 2021 to 2022.
                             <ol> 
-                                <li>Manager</li>
+                                <li>Manager </li>
                                 <li>Tech Lead CI/CD, production and Video Engineering</li>
                                 <li>Me - Lead Full stack developer</li>
                                 <li>Desinger - UI/UX</li>
-                                <li> Android developer</li>
+                                <li>Android developer</li>
                             </ol>
                     </li>
                     <li>
@@ -140,18 +128,19 @@ export default function PersonalInfo() {
 
             {
                 flag === 'Cerifications' && 
+                <>
                 <ul style={ulStyle} >
 
-                    <h3>Experience </h3>
-
+                    <Divider orientation="left" >Experience</Divider>
                     <li> Remote Senior software engineer at Innominds software pvt ltd : July 2022 - Present  </li>
                     <li> Remote Senior engineer at IBEE software solutions pvt ltd : Jan 2021 - July 2022</li>
                     <li> Python Developer at <a href="https://www.linkedin.com/company/kremlin-tech-ventures/about/" target="_blank"> Kremlin Tech </a> for two months, a affiliate of IBEE software solutions</li>
                     <li> Freelance Developer : 2018 August to  2020 August </li>
                     <li> Remote Python developer at <a href="https://www.linkedin.com/company/insisiv-labs/?originalSubdomain=in" target="_blank"> Insisiv labs </a> : 2018 June to 2018 August</li>
                     <li>Tata Consultancy services - Selected via codevita, served from 2016 August to 2018 May</li>
-
-                    <h3>Portfolio</h3>                                    
+                    
+                    <Divider orientation="left" >Portifolio</Divider>
+                     
                     <li> <a href="https://climate.pages.dev" target="_blank" >Cities, Climate and invisible impacts on health W.I.P</a>
                     </li>
                     <li>
@@ -161,8 +150,7 @@ export default function PersonalInfo() {
                          <a href="https://github.com/venu-mallik/Auth0_Fastapi" target="_blank">FastAPI with Auth0</a> ,
                          <a href="https://github.com/venu-mallik/Fastapi-sample-with-redis" target="_blank">FastAPI with redis</a>
                     </li>
-                     <h3>Learning</h3>
-                     
+                     <Divider orientation="left" >Learning</Divider>
                      
                      <li><a href="https://www.hackerrank.com/venumallik" target="_blank">Hacker Rank certifications</a>
                      </li>
@@ -180,13 +168,24 @@ export default function PersonalInfo() {
                      <li>10th Class/SSC : 2009 - 86%</li>
 
                     </ul>           
+                    <Divider orientation="left">Skills</Divider>
+                    <Descriptions size="small" layout="horizontal"  column={{ xxl: 3, xl: 2, lg: 2, md: 2, sm: 1, xs: 1 }} >
+                { Object.entries(skills).map(([k,v],i) => 
+                            {
+    
+                                return <Descriptions.Item label={k} key={i}>
+                                    <Progress type="circle" percent={v*20} size={30} />
+                                </Descriptions.Item>
+                                
+                        })}
+            </Descriptions>
+            </>
             }
             </div>
-            <Divider></Divider>
-            <Descriptions title={"Contact Information"} layout="horizontal" size="small"  column={{ xxl: 3, xl: 2, lg: 2, md: 2, sm: 1, xs: 1 }}>
+            <Divider orientation="left">Contact</Divider>
+            <Descriptions  layout="horizontal" size="small"  column={{ xxl: 3, xl: 2, lg: 2, md: 2, sm: 1, xs: 1 }}>
                 <Descriptions.Item label="Name">Venu Mallik Bellamkonda</Descriptions.Item>
-                <Descriptions.Item label="Email">venu.mallik@gmail.com</Descriptions.Item>
-                <Descriptions.Item label="Telephone">+91 98859 20369</Descriptions.Item>
+                <Descriptions.Item label="Email">venu.mallik@gmail.com / +91 98859 20369</Descriptions.Item>
                 <Descriptions.Item label="Address">
                     Vijayawada , Andhra Pradesh, India
                 </Descriptions.Item>
@@ -196,17 +195,6 @@ export default function PersonalInfo() {
                 {expmap[exp]} &nbsp;&nbsp;<Segmented options={[ 'Weeks', 'Months', 'Years']} size="small" value={exp}  onChange={(v)=>setExp(v)} >
                  </Segmented>  </Descriptions.Item>
                 
-            </Descriptions>
-            <Divider ></Divider>
-            <Descriptions title={"Skills"} size="small" layout="horizontal"  column={{ xxl: 3, xl: 2, lg: 2, md: 2, sm: 1, xs: 1 }} >
-                { Object.entries(skills).map(([k,v],i) => 
-                            {
-    
-                                return <Descriptions.Item label={k} key={i}>
-                                    <Progress type="circle" percent={v*20} size={30} />
-                                </Descriptions.Item>
-                                
-                        })}
             </Descriptions>
 
 
