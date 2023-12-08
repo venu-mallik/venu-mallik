@@ -108,17 +108,22 @@ export default function PersonalInfo() {
             {
                 flag === 'Leadership' &&
                 <ul style={ulStyle} >
-                    <Divider orientation="left">Innominds - Data engineering project at Energy Exemplar</Divider>
+                    <Divider orientation="left">Innominds - Senior Software engineer</Divider>
                         <ol style={ulStyle}>
+                            <b>Senior Full Stack engineer @ Datastax: August 2023 - Now </b>
+                            <li>Work on L1 jira tickets i.e mainly feature improvements and bug fixes </li>
+                            <li> Working on Jython, Java, Clojure , Javascript and Cassandra</li>
+                            <hr></hr>
+                            <b>Data engineering project at Energy Exemplar: July 2022 - June 2023</b>
                             <li>Lead the Code reviews and optimisation, reduced codebase from 10000 lines to 2000 lines of code and saved 45 minutes execution time.</li>
                             <li> the total execution time is brought down from 2 Hours to 1 Hour 10 Minutes .</li>
                     
                             <li>Reverse engineered Schema from C# enums of prop tool to reduce the steep adoption curve and save time for all stake holders.</li>
                             <li>100+ Pydantic classes with 1500+ memberships and 4000+ properties are auto generated using Json Schema and Enum rules .</li>
+                            
                         </ol>
-                    <Divider orientation="left"> Lead Full stack developer</Divider>
+                    <Divider orientation="left"> Lead Full stack developer : Sept 2020 to Jun 2022</Divider>
                             <ol style={ulStyle}> 
-                                
                             <li>  of <a href="https://minipix.in" target="_blank" >OTT website </a> consuming 
                              <a href="https://minipix-api.ibee.ai/docs" target="_blank" > FastAPI </a> in a team of 5 at IBEE software solutions from 2021 to 2022.</li>
                             <li> other members include Manager, Video engineer, Desinger and Android developer </li>
