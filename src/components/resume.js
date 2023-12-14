@@ -62,8 +62,8 @@ export default function PersonalInfo() {
                     <li >
                     {Object.entries(skills).map(([k,v],_) => <Tag style={percStyle(v)}>{k}</Tag>)} 
                         </li> 
+                    <li><u>Java, Python, javascript and SQL certified Senior Full Stack Engineer.</u></li>
                 </ul>
-                 
             {
                 flag === 'Activity' && 
                     <>
