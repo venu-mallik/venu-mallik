@@ -56,13 +56,14 @@ export default function PersonalInfo() {
             <Content style={{backgroundColor:'white' , padding:"2%" , height: "90vh"}}> 
               <div>
                 <ul style={ulStyle}> 
+                    <li><b>Java, Python, javascript and SQL certified Senior Full Stack Engineer.</b></li>
                    <li> <a target="_blank" href="/stack.png">Popular libraries</a> shows comparision of adoption between FastAPI, Django, Flask, Expressjs, NextJS, AntD.
                    </li>
                     <li>Confident, can jump start a project using cookiecutter or start templates and move project from wireframes to production in record time.</li>
                     <li >
                     {Object.entries(skills).map(([k,v],_) => <Tag style={percStyle(v)}>{k}</Tag>)} 
                         </li> 
-                    <li><u>Java, Python, javascript and SQL certified Senior Full Stack Engineer.</u></li>
+
                 </ul>
             {
                 flag === 'Activity' && 
