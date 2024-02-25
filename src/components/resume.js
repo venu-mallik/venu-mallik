@@ -145,12 +145,12 @@ export default function PersonalInfo() {
                     flag === 'Certifications' &&
                     <>
                         <Card>
-                            <Divider orientation="left" >Learning</Divider>
+                            <Divider orientation="left" >Learning & Certifications</Divider>
                                 {
                                 ["IZO-851.pdf", "IZO-897.pdf", "sql.png", "internship.pdf"].map((x,i)=>{
-                                  return <object width="300" height="300" data={`/${x}`} > </object> 
+                                  return <object width="300" height="300" data={`/${x}`}  name={x}> </object> 
                                 })}
-                            <ol><a href="https://www.hackerrank.com/venumallik" target="_blank">Hacker Rank certifications</a>
+                            <ol><a href="https://www.hackerrank.com/venumallik" target="_blank">Hacker Rank Python, Javascript and SQL.</a>
                             </ol>
                             <ol><a href="https://learn.microsoft.com/en-US/users/venumallikbellamkonda-3675/transcript/dlgo1hnq9j0x9zw" target="_blank">Innominds Microsoft Learning - 2022</a>
                             </ol>
