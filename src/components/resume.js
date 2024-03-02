@@ -147,19 +147,19 @@ export default function PersonalInfo() {
                         <Card>
                             <Divider orientation="left" >Learning & Certifications</Divider>
                                 {
-                                ["IZO-851.pdf", "IZO-897.pdf", "sql.png", "internship.pdf"].map((x,i)=>{
+                                ["IZO-851.png", "IZO-897.png", "sql.png", "hadoop.png"].map((x,i)=>{
                                   return <object width="300" height="300" data={`/${x}`}  name={x}> </object> 
                                 })}
                             <ol><a href="https://www.hackerrank.com/venumallik" target="_blank">Hacker Rank Python, Javascript and SQL.</a>
                             </ol>
                             <ol><a href="https://learn.microsoft.com/en-US/users/venumallikbellamkonda-3675/transcript/dlgo1hnq9j0x9zw" target="_blank">Innominds Microsoft Learning - 2022</a>
                             </ol>
-                            <ol><a href="/IZO-851.pdf" target="_blank">Java Standard Edition 6 Programmer Certified Professional</a>
+                            <ol><a href="/IZO-851.png" target="_blank">Java Standard Edition 6 Programmer Certified Professional</a>
                             </ol>
 
-                            <ol><a href="/IZO-897.pdf" target="_blank">Java Platform, Enterprise Edition 6 Web Services Developer Certified Expert Exam</a>
+                            <ol><a href="/IZO-897.png" target="_blank">Java Platform, Enterprise Edition 6 Web Services Developer Certified Expert Exam</a>
                             </ol>
-                            <ol><a href="/internship.pdf" target="_blank">Hadoop Training - 2015</a>
+                            <ol><a href="/hadoop.png" target="_blank">Hadoop Training - 2015</a>
                             </ol>
                             <ol>B.Tech / Information Technology:2016 - 86% </ol>
                             <ol>12th / Plus 2 : 2011  - 83%</ol>
