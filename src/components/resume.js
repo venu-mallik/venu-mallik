@@ -68,10 +68,13 @@ export default function PersonalInfo() {
                     <Button key="1" onClick={()=> setFlag('Certifications')}>
                         Certifications
                     </Button>, <br></br>, 
-                    <Descriptions.Item label="Links"><a target="_blank" href={"https://www.github.com/venu-mallik"} > Github </a>,&nbsp;<a target="_blank" href={"https://www.linkedin.com/in/venumallik"} >Linkedin</a>, &nbsp;<a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a></Descriptions.Item>
+                    <Descriptions.Item label="Links"></Descriptions.Item>
                 ]}
-                extra={[  <Descriptions.Item label="Email">venu.mallik@gmail.com</Descriptions.Item>, <br></br>,
-                          <Descriptions.Item label="Phone">+91 98859 20369</Descriptions.Item>
+                extra={[  <Descriptions.Item label="Email">
+                            {<> <text>venu.mallik@gmail.com</text> , <text>+91 98859 20369</text> <br></br>
+                            <a target="_blank" href={"https://www.github.com/venu-mallik"} > Github </a> , <a target="_blank" href={"https://www.linkedin.com/in/venumallik"} >Linkedin</a>
+                            , <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a>
+                              </>}</Descriptions.Item>
                             ]}
             ></PageHeader>
                 <Content style={{ backgroundColor: 'white' }}>
