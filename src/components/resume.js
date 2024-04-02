@@ -48,21 +48,11 @@ export default function PersonalInfo() {
 
     return (
         <Layout >
-{/* 
-            <Layout.Header>
-                <div className="demo-logo" />
-                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[flag]}
-                    items={['Leadership', 'Activity',
-                        'Certifications'].map((a) => ({ 'key': a, 'label': a }))}
-                    overflowedIndicator={<MenuOutlined />}
-                    onClick={(e) => { setFlag(e.key) }}
-                />
-            </Layout.Header> */}
             <PageHeader
-                ghost={false}
-                title= "Venu Mallik"
-                subTitle={ "Senior Software engineer"}
-                footer={[
+                ghost={true}
+                title= "Venu Mallik Bellamkonda"
+                subTitle={ "Senior engineer"}
+                extra={[
                     <Button  key="3"  onClick={()=> setFlag('Leadership')}>Leadership</Button>,
                     <Button key="2" onClick={()=> setFlag('Activity')}>Activity</Button>,
                     <Button key="1" onClick={()=> setFlag('Certifications')}>
@@ -70,10 +60,10 @@ export default function PersonalInfo() {
                     </Button>, <br></br>, 
                     <Descriptions.Item label="Links"></Descriptions.Item>
                 ]}
-                extra={[  <Descriptions.Item label="Email">
-                            {<> <text>venu.mallik@gmail.com</text> , <text>+91 98859 20369</text> <br></br>
-                            <a target="_blank" href={"https://www.github.com/venu-mallik"} > Github </a> , <a target="_blank" href={"https://www.linkedin.com/in/venumallik"} >Linkedin</a>
-                            , <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a>
+                footer={[  <Descriptions.Item label="Email">
+                            {<> <a href= "mailto: venu.mallik@gmail.com"> venu.mallik@gmail.com</a> | <text>+91 98859 20369</text> |
+                            <a target="_blank" href={"https://www.github.com/venu-mallik"} > Github </a> | <a target="_blank" href={"https://www.linkedin.com/in/venumallik"} > Linkedin </a>
+                            | <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a>
                               </>}</Descriptions.Item>
                             ]}
             ></PageHeader>
@@ -81,9 +71,9 @@ export default function PersonalInfo() {
                     <Card>
                         {/* <ul style={ulStyle}>  */}
                         <ol><b>Java, Python, javascript and SQL certified Senior Full Stack Engineer.</b></ol>
-                        <ol> <a target="_blank" href="/stack.png">Popular libraries</a> shows comparision of adoption between FastAPI, Django, Flask, Expressjs, NextJS, AntD.
+                        <ol> <a target="_blank" href="/stack.png">Popular libraries</a> shows comparision of adoption across FastAPI, Django, Flask, Expressjs, NextJS, AntD.
                         </ol>
-                        <ol>Confident, can jump start a project using cookiecutter or start templates and move project from wireframes to production in record time.</ol>
+                        <ol>Confident, can jump start a project using cookiecutter or start templates and move project from wireframes to POC to beta in record time.</ol>
                         <ol>
                             {Object.entries(skills).map(([k, v], _) => <Tag style={percStyle(v)}>{k}</Tag>)}
                         </ol>
