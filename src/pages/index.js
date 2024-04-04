@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react';
-import { Col, Row, Select, Layout, Table, Menu, Tag, Card } from 'antd';
-import { tabsList } from '@/components/menu';
+import { useState } from 'react';
 import PersonalInfo from '@/components/resume';
 
 const isSSREnabled = () => typeof window === 'undefined';
