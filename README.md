@@ -1,12 +1,10 @@
 
-## Hi, I'm Venu Mallik! 👋
+Welcome!
 
+I am a Senior engineer at innominds.
 
-## 🚀 About Me
-
-
-A mixed bag doing full stack and data engineering.
-Senior engineer at innominds;
+I wear many hats, working as both a full-stack developer and a data engineer.\
+My bachelor's degree in information technology helps keep my hair healthy (for now!).
 
 I use .py, .js, .java and sql.
 
