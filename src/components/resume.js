@@ -177,8 +177,8 @@ export default function PersonalInfo() {
                         <Card>
                             <Divider orientation="left" >Learning & Certifications</Divider>
                             {
-                                ["IZO-851.png", "IZO-897.png", "sql.png", "hadoop.png"].map((x, i) => {
-                                    return <object width="300" height="300" data={`/${x}`} name={x}> </object>
+                                ["IZO-851.png", "IZO-897.png", "sql.png", "databricks.jpg", "hadoop.png"].map((x, i) => {
+                                    return <object width="240" height="240" data={`/${x}`} name={x}> </object>
                                 })}
                             <li><a href="https://www.hackerrank.com/venumallik" target="_blank">Hacker Rank Python, Javascript and SQL.</a>
                             </li>
