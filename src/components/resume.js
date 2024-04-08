@@ -84,9 +84,10 @@ export default function PersonalInfo() {
                         </Card.Meta>
                         <Card.Meta title="Data engineering" avatar={<DatabaseOutlined />}
                             description={<div>
-                                <li>&#9733;&#9733;&#9733;&#9733;  API schema, OpenAPI, json schema, oauth2, RestAPI etc </li>
+                                <li>Schema validation, ETL, ELT, OLAP, OLTP, Data cleaning, visualisation</li>
                                 <li>&#9733;&#9733;&#9733;&#9733;&#9733;  Python, Pandas, SQL </li>
-                                <li>&#9733;&#9733;&#9733; Cassandra, Spark, Databricks, MongoDB and Big query, clojure</li>
+                                <li>&#9733;&#9733;&#9733;&#9733;  Vega-lite, Plotly, matplotlib, orange, tableau, google sheets & charts</li>
+                                <li>&#9733;&#9733;&#9733; Cassandra, Spark, Databricks, MongoDB and Big query</li>
                                 <br></br>
                             </div>}>
                         </Card.Meta>
