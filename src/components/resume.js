@@ -77,7 +77,7 @@ export default function PersonalInfo() {
                             className=""
                             description={<div>
                                 <li>Bachelors in Information technology(4 years) and 8 years of professional experience.</li>
-                                <li>Certified in Java, SQL and uses python, JavaScript heavily.</li>
+                                <li>Certified in Java, SQL and uses python, JavaScript daily and java as per need.</li>
                                 <li>Have experience in full stack and data engineering projects using any os, cloud/Platform.</li>
                                 <br></br>
                             </div>}>
