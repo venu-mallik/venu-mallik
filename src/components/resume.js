@@ -54,17 +54,20 @@ export default function PersonalInfo() {
                 title="Venu Mallik Bellamkonda"
                 subTitle={"Senior engineer"}
                 extra={[
-                    <Button key="4" onClick={() => setFlag('Home')}> <HomeOutlined></HomeOutlined> </Button>,
-                    <Button key="3" onClick={() => setFlag('Leadership')}><TrophyOutlined></TrophyOutlined>  </Button>,
-                    <Button key="2" onClick={() => setFlag('Activity')}> <FileTextOutlined></FileTextOutlined>   </Button>,
+                    <Button key="4" onClick={() => setFlag('Home')}> 
+                            <HomeOutlined style={{ 'color': flag == 'Home' ? "red" : "" }}   ></HomeOutlined> </Button>,
+                    <Button key="3" onClick={() => setFlag('Leadership')}>
+                            <TrophyOutlined style={{ 'color': flag == 'Leadership' ? "red" : "" }} ></TrophyOutlined>  </Button>,
+                    <Button key="2" onClick={() => setFlag('Activity')}> 
+                            <FileTextOutlined style={{ 'color': flag == 'Activity' ? "red" : "" }}></FileTextOutlined>   </Button>,
                     <Button key="1" onClick={() => setFlag('Certifications')}>
-                        <ReadOutlined></ReadOutlined>
+                             <ReadOutlined style={{ 'color': flag == 'Certifications' ? "red" : "" }} ></ReadOutlined>
                     </Button>, <br></br>,
                     <Descriptions.Item label="Links"></Descriptions.Item>
                 ]}
                 footer={[<Descriptions.Item label="Email">
                     {<> <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a> |
-                        <a href="mailto: venu.mallik@gmail.com"> venu.mallik@gmail.com</a> |
+                        <a href="mailto: venu.mallik@gmail.com" > venu.mallik@gmail.com </a> |
                         <a target="_blank" href={"https://www.github.com/venu-mallik"} > <GithubOutlined  /> </a> | <a target="_blank" href={"https://www.linkedin.com/in/venumallik"} > <LinkedinOutlined /> </a>
                     </>}</Descriptions.Item>
                 ]}
