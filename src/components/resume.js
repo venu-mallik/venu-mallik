@@ -2,7 +2,7 @@ import { Descriptions, Progress, Layout, Segmented, Divider, Button, Card, Space
 import { useState } from "react";
 import { PageHeader } from "@ant-design/pro-components";
 import { HistoryOutlined, ApiOutlined, DatabaseOutlined, HomeOutlined, TrophyOutlined, 
-    FileTextOutlined, ReadOutlined, GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
+    FileTextOutlined, ReadOutlined, GithubOutlined, LinkedinOutlined, HighlightOutlined } from "@ant-design/icons";
 
 export default function PersonalInfo() {
 
@@ -81,25 +81,34 @@ export default function PersonalInfo() {
                             description={<div>
                                 <li>Bachelors in Information technology(4 years) and 8 years of professional experience.</li>
                                 <li>Certified in Java, SQL, uses python, JavaScript daily and java as per need.</li>
-                                <li>Have experience in full stack, data engineering roles using any os, cloud/Platform.</li>
+                                <li>Have experience in full stack, data engineering roles using aws, azure clouds.</li>
                                 <br></br>
                             </div>}>
                         </Card.Meta>
-                        <Card.Meta title="Data engineering" avatar={<DatabaseOutlined />}
+                        <Card.Meta title="Data engineering (5+)" avatar={<DatabaseOutlined />}
                             description={<div>
-                                <li>Schema validation, ETL, ELT, OLAP, OLTP, Data cleaning, visualisation</li>
-                                <li>&#9733;&#9733;&#9733;&#9733;&#9733;  Python, Pandas, SQL </li>
-                                <li>&#9733;&#9733;&#9733;&#9733;  Vega-lite, Plotly, matplotlib, orange, tableau, google sheets & charts</li>
-                                <li>&#9733;&#9733;&#9733; Cassandra, Spark, Databricks, MongoDB and Big query</li>
+                                <li>Schema validation, ETL, ELT, OLAP, OLTP, wrangling & visualisation</li>
+                                <li>&#9733;&#9733;&#9733;&#9733;&#9733;  Python, Pandas, SQL. </li>
+                                <li>&#9733;&#9733;&#9733;&#9733;  Vega-lite, Plotly, matplotlib.</li>
+                                <li>&#9733;&#9733;&#9733; Cassandra, Spark, Databricks, MongoDB and Big query.</li>
                                 <br></br>
                             </div>}>
                         </Card.Meta>
-                        <Card.Meta title="Full stack" avatar={<ApiOutlined />}
+                        <Card.Meta title="Full stack (5+)" avatar={<ApiOutlined />}
                             description={<div>
-                                <li>&#9733;&#9733;&#9733;&#9733;  API schema, OpenAPI, json schema, oauth2, RestAPI etc </li>
-                                <li>&#9733;&#9733;&#9733;&#9733; FastAPI ,NextJS, Twisted, Java, S3, Cloudflare stack (pages & workers), queues and caching.</li>
-                                <li>&#9733;&#9733;&#9733; Resumable uplaods, Video streaming, Firebase, Analytics, Ant design etc </li>
+                                <li>&#9733;&#9733;&#9733;&#9733; API schema, OpenAPI, json schema, oauth2, RestAPI </li>
+                                <li>&#9733;&#9733;&#9733;&#9733; FastAPI ,NextJS, Twisted, Java, Cloudflare (pages & workers), queues and caching.</li>
+                                <li>&#9733;&#9733;&#9733; S3/SES/SQS/AWS transcoder, Resumable uploads, Streaming, Firebase, Analytics, Ant design etc </li>
                                 <li>Third party integrations like payment gateways, auth libs, analytics, promotions and ads </li>
+                            </div>}>
+                        </Card.Meta>
+                        <Card.Meta title="Domain Experience" avatar={<HighlightOutlined /> }
+                            description={<div>
+                                <li>1 year  -Product engg : Senior engineer @ Opscenter in Datastax.</li>
+                                <li>1 year  -Utilities    : Senior python engineer: Energy exemplar.</li>
+                                <li>2 years -Entertainment: Senior python engineer Video Streaming Platforms.</li>
+                                <li>2 years -Finance      : Freelance python engineer</li>
+                                <li>2 years -Insurance    : Systems engineer</li>
                             </div>}>
                         </Card.Meta>
                     </Card>}
