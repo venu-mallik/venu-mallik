@@ -1,4 +1,4 @@
-import { Descriptions, Progress, Layout, Segmented, Divider, Button, Card, Space } from "antd"
+import { Descriptions, Progress, Layout, Segmented, Divider, Button, Card, Timeline, Space } from "antd"
 import { useState } from "react";
 import { PageHeader } from "@ant-design/pro-components";
 import { HistoryOutlined, ApiOutlined, DatabaseOutlined, HomeOutlined, TrophyOutlined, 
@@ -100,17 +100,36 @@ export default function PersonalInfo() {
                                 <li>&#9733;&#9733;&#9733;&#9733; FastAPI ,NextJS, Twisted, Java, Cloudflare (pages & workers), queues and caching.</li>
                                 <li>&#9733;&#9733;&#9733; S3/SES/SQS/AWS transcoder, Resumable uploads, Streaming, Firebase, Analytics, Ant design etc </li>
                                 <li>Third party integrations like payment gateways, auth libs, analytics, promotions and ads </li>
+                                <br></br>
                             </div>}>
                         </Card.Meta>
-                        <Card.Meta title="Domain Experience" avatar={<HighlightOutlined /> }
-                            description={<div>
-                                <li>1 year  -Product engg : Senior engineer @ Opscenter in Datastax.</li>
-                                <li>1 year  -Utilities    : Senior python engineer: Energy exemplar.</li>
-                                <li>2 years -Entertainment: Senior python engineer Video Streaming Platforms.</li>
-                                <li>2 years -Finance      : Freelance python engineer</li>
-                                <li>2 years -Insurance    : Systems engineer</li>
-                            </div>}>
-                        </Card.Meta>
+                        <Divider orientation="left"  >Domain Experience</Divider>
+                            <div className="timeline_container">
+                                <Timeline  mode={'left'} 
+                                    items={[
+                                    {
+                                        label: 'Software Product (1 year)',
+                                        children: 'Senior engineer @ datastax.',
+                                    },
+                                    {
+                                        label: 'Utilities (1 year)',
+                                        children: 'Senior engineer @ Energy exemplar.',
+                                    },
+                                    {
+                                        label: 'Entertainment (2 years)',
+                                        children: 'Senior engineer @ startup.',
+                                    },
+                                    {
+                                        label: 'Finance (2 years)',
+                                        children: 'Python engineer',
+                                    },
+                                    {
+                                        label: 'Insurance (2 years)',
+                                        children: 'Systems engineer @ TCS'
+                                    }
+                                    ]}
+                                />
+                        </div>
                     </Card>}
                 {
                     flag === 'Activity' &&
