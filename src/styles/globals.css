@@ -17,16 +17,16 @@ color: rgba(0, 0, 0, 1) !important
 }
 
 div.timeline_container div.ant-timeline-item-label {
-  width: calc(10% - 12px) !important;
+  width: 170px !important;
 }
 
 div.timeline_container div.ant-timeline-item-content {
-  left: calc(11% - 4px) !important;
-  width: calc(89% - 4px) !important;
+  left: 170px !important;
+  width: auto !important;
 }
 
 div.timeline_container div.ant-timeline-item-tail,
 div.ant-timeline-item-head {
-  left: 11% !important;
+  left: 180px !important;
 }
 

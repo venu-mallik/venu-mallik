@@ -108,7 +108,7 @@ export default function PersonalInfo() {
                                 <Timeline  mode={'left'} 
                                     items={[
                                     {
-                                        label: 'Software Product (1 year)',
+                                        label: 'Data Product (1 year)',
                                         children: 'Senior engineer @ datastax.',
                                     },
                                     {
