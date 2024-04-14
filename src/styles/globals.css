@@ -17,16 +17,20 @@ color: rgba(0, 0, 0, 1) !important
 }
 
 div.timeline_container div.ant-timeline-item-label {
-  width: 170px !important;
+  width: 0px !important;
 }
 
 div.timeline_container div.ant-timeline-item-content {
-  left: 170px !important;
+  left: 0px !important;
   width: auto !important;
 }
 
 div.timeline_container div.ant-timeline-item-tail,
 div.ant-timeline-item-head {
-  left: 180px !important;
+  left: 0px !important;
 }
 
+div.mdcss table { border-collapse: collapse;  }
+div.mdcss tr { border-bottom: solid 0.5px black; border-left: solid 0.5px black; }
+div.mdcss td { border-right: solid 0.5px black; border-left: solid 0.5px black; }
+div.mdcss tr:nth-child() {background-color: #f2f2f2;}

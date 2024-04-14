@@ -1,12 +1,14 @@
-import { Descriptions, Progress, Layout, Segmented, Divider, Button, Card, Timeline, Space } from "antd"
+import { Descriptions, Progress, Layout, Segmented, Divider, Button, Card, Timeline, Collapse, Space } from "antd"
 import { useState } from "react";
 import { PageHeader } from "@ant-design/pro-components";
 import { HistoryOutlined, ApiOutlined, DatabaseOutlined, HomeOutlined, TrophyOutlined, 
     FileTextOutlined, ReadOutlined, GithubOutlined, LinkedinOutlined, HighlightOutlined } from "@ant-design/icons";
+import  MarkdownRenderer from "./rendermark";
 
 export default function PersonalInfo() {
 
     const { Content, Header, Footer, Sider } = Layout;
+    const [md, setmd] = useState("data_basic.md");
     const [exp, setExp] = useState("Years");
     const [flag, setFlag] = useState("Home");
     const start = new Date(2016, 8, 1);
@@ -48,6 +50,7 @@ export default function PersonalInfo() {
     }
 
     return (
+        <>
         <Layout >
             <PageHeader
                 ghost={true}
@@ -56,14 +59,15 @@ export default function PersonalInfo() {
                 extra={[
                     <Button key="4" onClick={() => setFlag('Home')}> 
                             <HomeOutlined style={{ 'color': flag == 'Home' ? "red" : "" }}   ></HomeOutlined> </Button>,
-                    <Button key="3" onClick={() => setFlag('Leadership')}>
-                            <TrophyOutlined style={{ 'color': flag == 'Leadership' ? "red" : "" }} ></TrophyOutlined>  </Button>,
                     <Button key="2" onClick={() => setFlag('Activity')}> 
                             <FileTextOutlined style={{ 'color': flag == 'Activity' ? "red" : "" }}></FileTextOutlined>   </Button>,
                     <Button key="1" onClick={() => setFlag('Certifications')}>
                              <ReadOutlined style={{ 'color': flag == 'Certifications' ? "red" : "" }} ></ReadOutlined>
-                    </Button>, <br></br>,
-                    <Descriptions.Item label="Links"></Descriptions.Item>
+                    </Button>, 
+                    <Button key="4" onClick={() => setFlag('Reading')}>
+                        <HighlightOutlined style={{ 'color': flag == 'Reading' ? "red" : "" }} ></HighlightOutlined>
+                    </Button>, 
+           
                 ]}
                 footer={[<Descriptions.Item label="Email">
                     {<> <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a> |
@@ -108,30 +112,68 @@ export default function PersonalInfo() {
                                 <Timeline  mode={'left'} 
                                     items={[
                                     {
-                                        label: 'Data Product (1 year)',
-                                        children: 'Senior engineer @ datastax.',
+                                        label: '',
+                                        children: <Collapse >
+                                         <Collapse.Panel header="Data Product (1 year): Senior engineer @ Datastax." key="1">
+                                            <li>Work on L1 jira tickets i.e feature improvements and bug fixes </li>
+                                            <li> Working on Jython twisted and Java, Clojure , Javascript and Cassandra.</li>
+                                            <li>Upgrading cassandra java driver form 1.x to 4.x</li>
+                                            <li>Code review and process improvements</li>
+                                         </Collapse.Panel>
+                                        </Collapse> 
                                     },
                                     {
-                                        label: 'Utilities (1 year)',
-                                        children: 'Senior engineer @ Energy exemplar.',
+                                        label: '',
+                                        children: <Collapse >
+                                        <Collapse.Panel header='Utilities (1 year): Senior engineer @ Energy exemplar.' key="1">
+                                        <li>Lead the Code reviews and optimisation, reduced codebase from 10000 lines to 2000 lines of code and saved 45 minutes execution time.</li>
+                                        <li> the total execution time is brought down from 2 Hours to 1 Hour 10 Minutes .</li>
+
+                                        <li>Reverse engineered Schema from C# enums of prop tool to reduce the steep adoption curve and save time for all stake holders.</li>
+                                        <li>100+ Pydantic classes with 1500+ memberships and 4000+ properties are auto generated using Json Schema and Enum rules .</li>
+                                        </Collapse.Panel>
+                                       </Collapse> 
                                     },
                                     {
-                                        label: 'Entertainment (2 years)',
-                                        children: 'Senior engineer @ startup.',
+                                        label: '',
+                                        children: 
+                                        <Collapse >
+                                        <Collapse.Panel header='Entertainment (2 years): Lead Senior engineer @ ibeehosting.com' key="1">
+                                        <li>  of <a href="https://minipix.in" target="_blank" >NextJS OTT website </a> consuming
+                                            <a href="https://minipix-api.ibee.ai/docs" target="_blank" > FastAPI </a> in a team of 5 at IBEE software solutions from 2021 to 2022.</li>
+                                        <li> other members include Manager, Video engineer, Desinger and Android developer </li>
+                                        <li>Built resumable uploads, payment gateways integrations, analytic reports and Shaka player integration </li>
+                                        <li>Worked on other projects like Bare metal cloud automation, Meander(Vimeo clone) etc</li>
+                                       </Collapse.Panel>
+                                       </Collapse> 
                                     },
                                     {
-                                        label: 'Finance (2 years)',
-                                        children: 'Python engineer',
+                                        label: '',
+                                        children: 
+                                        <Collapse >
+                                        <Collapse.Panel header='Finance (2 years): Python engineer' key="1">
+                                            <li> <a href="https://github.com/venu-mallik/astrodata">Part of project at github</a></li>
+                                        </Collapse.Panel>
+                                       </Collapse> 
                                     },
                                     {
-                                        label: 'Insurance (2 years)',
-                                        children: 'Systems engineer @ TCS'
+                                        label: '',
+                                        children: 
+                                        
+                                        <Collapse >
+                                        <Collapse.Panel header='Insurance (2 years): Systems engineer @ USAA' key="1">
+                                            <li>The project is to reverse engineer 500+ screens of progress 4GL into Java wicket screens</li>
+                                            <li> The database is migrated from optim to oracle</li>
+                                            <li>Lead a team in query optimisation, reducing the redundant joins & sub queries.</li>
+                                            <li>Support Service Now and Archibus integration and migrations.</li>
+                                        </Collapse.Panel>
+                                       </Collapse> 
                                     }
                                     ]}
                                 />
                         </div>
                     </Card>}
-                {
+                 {
                     flag === 'Activity' &&
                     <Card>
                         <Divider orientation="left">Backend</Divider>
@@ -169,39 +211,6 @@ export default function PersonalInfo() {
                             Hands on experience using docker to spin up Minio s3, Redis, RabbitMQ and other services for development.</li>
                     </Card>
                 }
-                {
-                    flag === 'Leadership' &&
-                    <Card >
-                        <b>Innominds - Senior Software engineer</b>
-                        <Divider orientation="left">@ Datastax: August 2023 - Now </Divider>
-                        <li>Work on L1 jira tickets i.e feature improvements and bug fixes </li>
-                        <li> Working on Jython twisted and Java, Clojure , Javascript and Cassandra.</li>
-                        <li>Upgrading cassandra java driver form 1.x to 4.x</li>
-                        <li>Code review and process improvements</li>
-                        <Divider orientation="left">@ Energy Exemplar: July 2022 - June 2023</Divider>
-                        <li>Lead the Code reviews and optimisation, reduced codebase from 10000 lines to 2000 lines of code and saved 45 minutes execution time.</li>
-                        <li> the total execution time is brought down from 2 Hours to 1 Hour 10 Minutes .</li>
-
-                        <li>Reverse engineered Schema from C# enums of prop tool to reduce the steep adoption curve and save time for all stake holders.</li>
-                        <li>100+ Pydantic classes with 1500+ memberships and 4000+ properties are auto generated using Json Schema and Enum rules .</li>
-
-                        <b>IBEE software sols pvt ltd</b>
-                        <Divider orientation="left"> Lead Full stack : Sept 2020 to Jun 2022</Divider>
-                        <li>  of <a href="https://minipix.in" target="_blank" >NextJS OTT website </a> consuming
-                            <a href="https://minipix-api.ibee.ai/docs" target="_blank" > FastAPI </a> in a team of 5 at IBEE software solutions from 2021 to 2022.</li>
-                        <li> other members include Manager, Video engineer, Desinger and Android developer </li>
-                        <li>Built resumable uploads, payment gateways integrations, analytic reports and Shaka player integration </li>
-                        <li>Worked on other projects like Bare metal cloud automation, Meander etc</li>
-                        <b>Tata Consultancy Services</b>
-                        <Divider orientation="left">@USAA - Java and SQL projects</Divider>
-                        <li>The project is to reverse engineer 500+ screens of progress 4GL into Java wicket screens</li>
-                        <li> The database is migrated from optim to oracle</li>
-                        <li>Lead a team in query optimisation, reducing the redundant joins & sub queries.</li>
-                        <li>Support Service Now and Archibus integration and migrations.</li>
-                    </Card>
-
-                }
-
                 {
                     flag === 'Certifications' &&
                     <>
@@ -260,18 +269,12 @@ export default function PersonalInfo() {
                     </>
                 }
 
+                {flag !== "Reading" &&
+                <Card title="Skills">
 
-                <Card>
-
-                    <li>As a well-rounded professional, I have obtained a Bachelor's degree in Information Technology, complemented by certifications in a diverse range of technologies. My technical expertise includes proficiency in Python, Java, Hadoop, Databricks, and SQL, demonstrating my commitment to continuous learning and staying up-to-date with industry trends and best practices.</li>
                     <li> <a target="_blank" href="/stack.png">Popular libraries</a> shows comparision of adoption across FastAPI, Django, Flask, Expressjs, NextJS, AntD.
                     </li>
                     <li>Confident, can jump start a project using cookiecutter or start templates and move project from wireframes to POC to beta in record time.</li>
-                    {/*<li>
-                            {Object.entries(skills).map(([k, v], _) => <Tag style={percStyle(v)}>{k}</Tag>)}
-                        </li>
-
-                         </ul> */}
 
                     <img width="50" src="https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png" alt="Python" title="Python" />
                     <img width="50" src="https://user-images.githubusercontent.com/25181517/192107858-fe19f043-c502-4009-8c47-476fc89718ad.png" alt="REST" title="REST" />
@@ -294,15 +297,15 @@ export default function PersonalInfo() {
                     <img width="50" src="https://user-images.githubusercontent.com/25181517/189716855-2c69ca7a-5149-4647-936d-780610911353.png" alt="Firebase" title="Firebase" />
                     <img width="50" src="https://cdn.brighttalk.com/ams/california/images/channel/19357/image_840418.png" alt="Auth0" title="Auth0" />
                     <img width="50" src="https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png" alt="Git" title="Git" />
-                </Card>
+                </Card> }
 
 
                 <Divider orientation="left">Contact</Divider>
                 <Descriptions layout="horizontal" size="small" column={{ xxl: 3, xl: 2, lg: 2, md: 2, sm: 1, xs: 1 }}>
                     <Descriptions.Item label="Name">Venu Mallik Bellamkonda</Descriptions.Item>
-                    <Descriptions.Item label="Email">venu.mallik@gmail.com / +91 98859 20369</Descriptions.Item>
+                    <Descriptions.Item label="Email">venu.mallik@gmail.com / +91 9885920369</Descriptions.Item>
                     <Descriptions.Item label="Address">
-                        Vijayawada , Andhra Pradesh, India
+                        Hyderabad, Telangana, India
                     </Descriptions.Item>
                     <Descriptions.Item label="Links"><a target="_blank" href={"https://www.github.com/venu-mallik"} > Github </a>,&nbsp;<a target="_blank" href={"https://www.linkedin.com/in/venumallik"} >Linkedin</a>, &nbsp;<a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a></Descriptions.Item>
                     <Descriptions.Item label="Education">Information technology 2012-16 </Descriptions.Item>
@@ -310,10 +313,17 @@ export default function PersonalInfo() {
                         {expmap[exp]} &nbsp;&nbsp;<Segmented options={['Weeks', 'Months', 'Years']} size="small" value={exp} onChange={(v) => setExp(v)} >
                         </Segmented>  </Descriptions.Item>
 
-                </Descriptions>
-
-
+                </Descriptions> 
             </Content>
         </Layout>
+        {
+            flag == 'Reading' && 
+            <><Divider>Data Engineering - Reference</Divider>
+            {["data_basic.md", "data_services.md", "data_operations.md",].map((x, i) => {
+                return <Button key={i} onClick={() => setmd(x)}>{x.replace("data_","").toUpperCase()}</Button>
+            })}
+             {md && <MarkdownRenderer filePath={md}></MarkdownRenderer>}
+            </>
+        }</>
     )
 }
