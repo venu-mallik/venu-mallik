@@ -69,8 +69,8 @@ export default function PersonalInfo() {
                     {<> <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a> |
                         <a href="mailto: venu.mallik@gmail.com" > venu.mallik@gmail.com </a> |
                         <a target="_blank" href={"https://www.github.com/venu-mallik"} > <GithubOutlined  /> </a> | <a target="_blank" href={"https://www.linkedin.com/in/venumallik"} > <LinkedinOutlined /> </a>
-                        <a target="_blank" href="https://venu-mallik.github.io"> Blog </a>
-                        <a target="blank" href="https://climate.pages.dev"> Visualisation </a>
+                        | <a target="_blank" href="https://venu-mallik.github.io"> Blog </a>
+                        | <a target="blank" href="https://climate.pages.dev"> Visual </a>
                     </>}</Descriptions.Item>
                 ]}
             ></PageHeader>
@@ -315,9 +315,5 @@ export default function PersonalInfo() {
             </Content>
         </Layout>
             </>
-            </>
-        }</>
-        </>
-        }</>
     )
 }
