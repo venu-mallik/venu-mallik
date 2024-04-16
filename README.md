@@ -22,5 +22,10 @@ My experience:
     
     Python 6+, Javascript 4+, Java 4+
 
-Please find more details at https://venu-mallik.pages.dev 
+#### Links
 
+[Developer Profile](https://venu-mallik.pages.dev) , [Data visualisation](https://climate.pages.dev)
+
+#### Data engineering
+
+[Blog](https://venu-mallik.github.io)
