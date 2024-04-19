@@ -11,7 +11,7 @@ export default function PersonalInfo() {
     const [md, setmd] = useState("data_basic.md");
     const [exp, setExp] = useState("Years");
     const [flag, setFlag] = useState("Home");
-    const start = new Date(2016, 8, 1);
+    const start = new Date(2012, 6, 1);
     const now = new Date();
     const diffTime = Math.abs(now - start);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
