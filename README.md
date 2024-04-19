@@ -1,7 +1,7 @@
 
 Welcome!
 
-I am a Senior engineer at innominds.
+I am a Senior software engineer with a combined experience of 10+ years.
 
 I wear many hats, working as both a full-stack developer and a data engineer.\
 My bachelor's degree in information technology helps keep my hair healthy (for now!).
