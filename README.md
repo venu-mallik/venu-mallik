@@ -2,7 +2,10 @@
 
 ## Profile
 
-# Senior Software Engineer / Data Engineer
+#### Links
+
+[Developer Profile](https://venu-mallik.pages.dev) | [Data visualisation](https://climate.pages.dev) | [Data engineering Blog](https://venu-mallik.github.io) |
+
 
 Seasoned technology professional with over a decade of combined experience in full-stack development and data engineering. 
 Holding a bachelor's degree in Information Technology, I seamlessly integrate theoretical knowledge with practical skills to drive innovation and deliver efficient, scalable solutions.
@@ -40,7 +43,3 @@ Holding a bachelor's degree in Information Technology, I seamlessly integrate th
 - Passion for continuous learning and staying up-to-date with industry trends and best practices
 
 I thrive in dynamic, challenging environments that foster growth and innovation. With a deep understanding of both software development and data engineering, I am well-equipped to contribute significantly to any organization's success, driving digital transformation and delivering impactful solutions.
-
-#### Links
-
-[Developer Profile](https://venu-mallik.pages.dev) | [Data visualisation](https://climate.pages.dev) | [Data engineering Blog](https://venu-mallik.github.io) |
