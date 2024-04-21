@@ -2,8 +2,6 @@
 
 ## Profile
 
-#### Links
-
 [Developer Profile](https://venu-mallik.pages.dev) | [Data visualisation](https://climate.pages.dev) | [Data engineering Blog](https://venu-mallik.github.io) |
 
 
