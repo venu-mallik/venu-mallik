@@ -1,14 +1,60 @@
-import { Descriptions, Progress, Layout, Segmented, Divider, Button, Card, Timeline, Collapse, Space } from "antd"
-import { useState } from "react";
+import { Descriptions, Progress, Layout, Segmented, Divider,Form, Button, Card,
+         Timeline, Collapse, Space, Drawer, Input, InputNumber } from "antd"
+import { useEffect, useState } from "react";
 import { PageHeader } from "@ant-design/pro-components";
 import { HistoryOutlined, ApiOutlined, DatabaseOutlined, HomeOutlined, TrophyOutlined, 
     FileTextOutlined, ReadOutlined, GithubOutlined, LinkedinOutlined, HighlightOutlined } from "@ant-design/icons";
-import  MarkdownRenderer from "./rendermark";
+
+const postDataToEmail = (data) => {
+
+    fetch("https://formspree.io/f/xnqerpaj", {
+      'body' : JSON.stringify(data) ,
+      'method' : 'POST'
+    }).then(()=> console.log("Posted Succesfully")).catch(err => console.log(err));
+  }
+  
+  const MyForm = () => {
+  
+    return (
+      <Form
+      labelCol={{ span: 4 }}
+      wrapperCol={{ span: 14 }}
+      layout="Vertical"
+      style={{ maxWidth: 1000 }}
+      title="Submit Requirement"
+      action={"https://formspree.io/f/xnqerpaj"}
+      method='post'
+      onFinish={(b)=> postDataToEmail(b)  }
+    >
+        <Form.Item label="Name" name={"name"} required>
+            <Input placeholder='Please enter your Name'></Input>
+        </Form.Item>
+      <Form.Item label="Email" name={"email"} required>
+          <Input type='email' placeholder='Please enter your email'></Input>
+      </Form.Item>
+      <Form.Item label="Describe" name="describe" required>
+            <Input.TextArea size='large' rows={5} placeholder='write in detail your requirement or use case or feedback'></Input.TextArea>
+        </Form.Item>
+      <Form.Item label="Costs Now" name="cost" >
+        <InputNumber  min={0} max={100000} addonAfter={'USD/Month'} />
+      </Form.Item>
+      <Form.Item label="Target budget" name="targetBudget">
+        <InputNumber  min={0} max={100000} addonAfter={'USD/Month'} />
+      </Form.Item>
+      <Form.Item label="Additional details" name="details" >
+        <Input.TextArea size='large' rows={5} placeholder='write in detail your inspiration, poc, tools/cloud you use or website links?' ></Input.TextArea>
+      </Form.Item>
+      <Form.Item label="Sumbit">
+        <Button type="primary" htmlType="submit"> Submit </Button>
+      </Form.Item>
+    </Form>  
+    
+    )
+  }
 
 export default function PersonalInfo() {
 
     const { Content, Header, Footer, Sider } = Layout;
-    const [md, setmd] = useState("data_basic.md");
     const [exp, setExp] = useState("Years");
     const [flag, setFlag] = useState("Home");
     const start = new Date(2012, 6, 1);
@@ -16,6 +62,8 @@ export default function PersonalInfo() {
     const diffTime = Math.abs(now - start);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     const [collapsed, setCollapsed] = useState(false);
+    const [formopen, setFormOpen] = useState(false);
+    const [footer,setFooter] = useState("");
     const toggleCollapsed = () => {
         setCollapsed(!collapsed);
     };
@@ -49,32 +97,81 @@ export default function PersonalInfo() {
         "Devops, Queues & Caching": 3
     }
 
+    useEffect(() => {
+        let host = window.location.hostname;
+        if(host.includes("venu-mallik")){
+            setFooter("personal");
+        }else{
+            setFooter("llc");
+        }
+    }, []);
+
+    const personalHeader = () => {
+        return  <PageHeader
+    ghost={true}
+    title="Venu Mallik Bellamkonda"
+    subTitle={"Senior engineer"}
+    extra={[
+        <Button key="4" onClick={() => setFlag('Home')}> 
+                <HomeOutlined style={{ 'color': flag == 'Home' ? "red" : "" }}   ></HomeOutlined> </Button>,
+        <Button key="2" onClick={() => setFlag('Activity')}> 
+                <FileTextOutlined style={{ 'color': flag == 'Activity' ? "red" : "" }}></FileTextOutlined>   </Button>,
+        <Button key="1" onClick={() => setFlag('Certifications')}>
+                 <ReadOutlined style={{ 'color': flag == 'Certifications' ? "red" : "" }} ></ReadOutlined>
+        </Button>,           
+    ]}
+    footer={[<Descriptions.Item label="Email">
+        {<> <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a> |
+            <a href="mailto: venu.mallik@gmail.com" > venu.mallik@gmail.com </a> 
+            | <a target="_blank" href={"https://www.github.com/venu-mallik"} > <GithubOutlined  /> </a>
+            {/* <a target="_blank" href={"https://www.linkedin.com/in/venumallik"} > <LinkedinOutlined /> </a> */}
+            | <a target="_blank" href="https://venu-mallik.github.io"> Data engineering blog </a>
+            | <a target="blank" href="https://climate.pages.dev"> Data Visualisation </a> 
+            | <Button onClick={()=> setFormOpen(true)}>Submit feedback</Button>
+                <Drawer title="Multi Purpose Form" size='large'
+                    onClose={()=> setFormOpen(false)} open={formopen}>
+                <MyForm/>
+            </Drawer>
+        </>}</Descriptions.Item>
+    ]}
+></PageHeader> };
+
+
+const llcHeader = () => {
+    return  <PageHeader
+ghost={true}
+title="Polyglot Programmer llc"
+subTitle={"Founder: Venu Mallik"}
+extra={[
+    <Button key="4" onClick={() => setFlag('Home')}> 
+            <HomeOutlined style={{ 'color': flag == 'Home' ? "red" : "" }}   ></HomeOutlined> </Button>,
+    <Button key="2" onClick={() => setFlag('Activity')}> 
+            <FileTextOutlined style={{ 'color': flag == 'Activity' ? "red" : "" }}></FileTextOutlined>   </Button>,
+    <Button key="1" onClick={() => setFlag('Certifications')}>
+             <ReadOutlined style={{ 'color': flag == 'Certifications' ? "red" : "" }} ></ReadOutlined>
+    </Button>,           
+]}
+footer={[<Descriptions.Item label="Email">
+    {<> 
+        <a target="_blank" href="https://venu-mallik.github.io"> Data Engineering blog </a>
+        | <a target="blank" href="https://climate.pages.dev"> Data Visualisation </a> 
+        | <Button onClick={()=> setFormOpen(true)}>Request quote</Button>
+            <Drawer title="Multi Purpose Form" size='large'
+              onClose={()=> setFormOpen(false)} open={formopen}>
+              <MyForm/>
+            </Drawer>
+    </>}</Descriptions.Item>
+]}
+></PageHeader> };
+
+
+
+
     return (
         <>
         <Layout >
-            <PageHeader
-                ghost={true}
-                title="Venu Mallik Bellamkonda"
-                subTitle={"Senior engineer"}
-                extra={[
-                    <Button key="4" onClick={() => setFlag('Home')}> 
-                            <HomeOutlined style={{ 'color': flag == 'Home' ? "red" : "" }}   ></HomeOutlined> </Button>,
-                    <Button key="2" onClick={() => setFlag('Activity')}> 
-                            <FileTextOutlined style={{ 'color': flag == 'Activity' ? "red" : "" }}></FileTextOutlined>   </Button>,
-                    <Button key="1" onClick={() => setFlag('Certifications')}>
-                             <ReadOutlined style={{ 'color': flag == 'Certifications' ? "red" : "" }} ></ReadOutlined>
-                    </Button>,           
-                ]}
-                footer={[<Descriptions.Item label="Email">
-                    {<> <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a> |
-                        <a href="mailto: venu.mallik@gmail.com" > venu.mallik@gmail.com </a> 
-                        | <a target="_blank" href={"https://www.github.com/venu-mallik"} > <GithubOutlined  /> </a>
-                        {/* <a target="_blank" href={"https://www.linkedin.com/in/venumallik"} > <LinkedinOutlined /> </a> */}
-                        | <a target="_blank" href="https://venu-mallik.github.io"> Data engineering blog </a>
-                        | <a target="blank" href="https://climate.pages.dev"> Data Visualisation </a> 
-                    </>}</Descriptions.Item>
-                ]}
-            ></PageHeader>
+            {footer == "personal" && personalHeader()}
+            {footer == "llc" && llcHeader()}
             <Content style={{ backgroundColor: 'white' }}>
                 {
                     flag === 'Home' &&
@@ -275,7 +372,7 @@ export default function PersonalInfo() {
                     </li>
                     <li>Confident, can jump start a project using cookiecutter or start templates and move project from wireframes to POC to beta in record time.</li>
 
-                    <img width="50" src="https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png" alt="Python" title="Python" />
+                    {/* <img width="50" src="https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png" alt="Python" title="Python" />
                     <img width="50" src="https://user-images.githubusercontent.com/25181517/192107858-fe19f043-c502-4009-8c47-476fc89718ad.png" alt="REST" title="REST" />
                     <img width="50" src="https://user-images.githubusercontent.com/25181517/183423775-2276e25d-d43d-4e58-890b-edbc88e915f7.png" alt="Flask" title="Flask" />
                     <img width="50" src="https://user-images.githubusercontent.com/25181517/117201156-9a724800-adec-11eb-9a9d-3cd0f67da4bc.png" alt="Java" title="Java" />
@@ -295,11 +392,12 @@ export default function PersonalInfo() {
                     <img width="50" src="https://github.com/marwin1991/profile-technology-icons/assets/136815194/50342602-8025-4030-b492-550f2eaa4073" alt="RabbitMQ" title="RabbitMQ" />
                     <img width="50" src="https://user-images.githubusercontent.com/25181517/189716855-2c69ca7a-5149-4647-936d-780610911353.png" alt="Firebase" title="Firebase" />
                     <img width="50" src="https://cdn.brighttalk.com/ams/california/images/channel/19357/image_840418.png" alt="Auth0" title="Auth0" />
-                    <img width="50" src="https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png" alt="Git" title="Git" />
+                    <img width="50" src="https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png" alt="Git" title="Git" /> */}
                 </Card> }
 
 
-                <Divider orientation="left">Contact</Divider>
+            { footer === 'personal' &&
+               <><Divider orientation="left">Contact</Divider>
                 <Descriptions layout="horizontal" size="small" column={{ xxl: 3, xl: 2, lg: 2, md: 2, sm: 1, xs: 1 }}>
                     <Descriptions.Item label="Name">Venu Mallik Bellamkonda</Descriptions.Item>
                     <Descriptions.Item label="Email">venu.mallik@gmail.com  &nbsp;&nbsp;&nbsp; <div id="sntlNumDisplay"></div></Descriptions.Item>
@@ -309,7 +407,7 @@ export default function PersonalInfo() {
                         {expmap[exp]} &nbsp;&nbsp;<Segmented options={['Weeks', 'Months', 'Years']} size="small" value={exp} onChange={(v) => setExp(v)} >
                         </Segmented>  </Descriptions.Item>
 
-                </Descriptions> 
+                </Descriptions> </>}
             </Content>
         </Layout>
             </>
