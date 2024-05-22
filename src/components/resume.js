@@ -99,10 +99,10 @@ export default function PersonalInfo() {
 
     useEffect(() => {
         let host = window.location.hostname;
-        if(host.includes("venu-mallik")){
-            setFooter("personal");
-        }else{
+        if(host.includes("polyglotllc")){
             setFooter("llc");
+        }else{
+            setFooter("personal");
         }
     }, []);
 
