@@ -44,7 +44,7 @@ const postDataToEmail = (data) => {
       <Form.Item label="Additional details" name="details" >
         <Input.TextArea size='large' rows={5} placeholder='write in detail your inspiration, poc, tools/cloud you use or website links?' ></Input.TextArea>
       </Form.Item>
-      <Form.Item label="Sumbit">
+      <Form.Item label="Submit">
         <Button type="primary" htmlType="submit"> Submit </Button>
       </Form.Item>
     </Form>  
@@ -210,23 +210,22 @@ footer={[<Descriptions.Item label="Email">
                                     {
                                         label: '',
                                         children: <Collapse >
-                                         <Collapse.Panel header="Data Product (1 year): Senior engineer @ Datastax." key="1">
-                                            <li>Work on L1 jira tickets i.e feature improvements and bug fixes </li>
+                                         <Collapse.Panel header="OpsCenter (1 year): Senior engineer @ Datastax. Payroll - Innominds" key="1">
+                                            <li>Work on L3 jira tickets i.e feature improvements and bug fixes </li>
                                             <li> Working on Jython twisted and Java, Clojure , Javascript and Cassandra.</li>
-                                            <li>Upgrading cassandra java driver form 1.x to 4.x</li>
-                                            <li>Code review and process improvements</li>
+                                            <li>Upgrading cassandra java driver form 1.x to 4.x in multiple modules.</li>
+                                            <li>Code review, process improvements, unit, integration and automated functional tests.</li>
                                          </Collapse.Panel>
                                         </Collapse> 
                                     },
                                     {
                                         label: '',
                                         children: <Collapse >
-                                        <Collapse.Panel header='Utilities (1 year): Senior engineer @ Energy exemplar.' key="1">
+                                        <Collapse.Panel header='Plexos (1 year): Senior engineer @ Energy exemplar. . Payroll - Innominds' key="1">
                                         <li>Lead the Code reviews and optimisation, reduced codebase from 10000 lines to 2000 lines of code and saved 45 minutes execution time.</li>
                                         <li> the total execution time is brought down from 2 Hours to 1 Hour 10 Minutes .</li>
-
                                         <li>Reverse engineered Schema from C# enums of prop tool to reduce the steep adoption curve and save time for all stake holders.</li>
-                                        <li>100+ Pydantic classes with 1500+ memberships and 4000+ properties are auto generated using Json Schema and Enum rules .</li>
+                                        <li>100+ Pydantic classes with 1500+ memberships and 4000+ properties are auto generated using Json Schema and Enums.</li>
                                         </Collapse.Panel>
                                        </Collapse> 
                                     },
@@ -234,7 +233,7 @@ footer={[<Descriptions.Item label="Email">
                                         label: '',
                                         children: 
                                         <Collapse >
-                                        <Collapse.Panel header='Entertainment (2 years): Lead Senior engineer @ ibeehosting.com' key="1">
+                                        <Collapse.Panel header='Entertainment- Netflix like OTT (2 years): Lead Senior engineer @ ibeehosting.com' key="1">
                                         <li>  of <a href="https://minipix.in" target="_blank" >NextJS OTT website </a> consuming
                                             <a href="https://minipix-api.ibee.ai/docs" target="_blank" > FastAPI </a> in a team of 5 at IBEE software solutions from 2021 to 2022.</li>
                                         <li> other members include Manager, Video engineer, Desinger and Android developer </li>
@@ -247,7 +246,7 @@ footer={[<Descriptions.Item label="Email">
                                         label: '',
                                         children: 
                                         <Collapse >
-                                        <Collapse.Panel header='Finance (2 years): Python engineer' key="1">
+                                        <Collapse.Panel header='Finance (2 years) Timeseries and data analysis: Python engineer' key="1">
                                             <li> <a href="https://github.com/venu-mallik/astrodata">Part of project at github</a></li>
                                         </Collapse.Panel>
                                        </Collapse> 
@@ -257,7 +256,7 @@ footer={[<Descriptions.Item label="Email">
                                         children: 
                                         
                                         <Collapse >
-                                        <Collapse.Panel header='Insurance (2 years): Systems engineer @ USAA' key="1">
+                                        <Collapse.Panel header='Insurance (2 years): Systems engineer @ USAA, Payroll - TCS' key="1">
                                             <li>The project is to reverse engineer 500+ screens of progress 4GL into Java wicket screens</li>
                                             <li> The database is migrated from optim to oracle</li>
                                             <li>Lead a team in query optimisation, reducing the redundant joins & sub queries.</li>
