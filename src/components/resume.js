@@ -176,12 +176,14 @@ footer={[<Descriptions.Item label="Email">
                 {
                     flag === 'Home' &&
                     <Card>
-                        <Card.Meta title="Experience" avatar={<HistoryOutlined />}
+                        <Card.Meta title={`Experience ${expmap['Years']}`} avatar={<HistoryOutlined />}
                             className=""
                             description={<div>
                                 <li>Bachelors in Information technology(4 years) and 8 years of professional experience.</li>
                                 <li>Certified in Java, SQL, uses python, JavaScript daily and java as per need.</li>
-                                <li>Have experience in full stack, data engineering roles using aws, azure clouds.</li>
+                                <li>Have Industry experience in full stack, data engineering roles using aws, azure clouds.</li>
+                                <li>Clients:  DATASTAX, ENERGY EXEMPLAR, USAA.  </li>
+                                <li>Lead fullstack developer at Start up: IBEE Software solutions.</li>
                                 <br></br>
                             </div>}>
                         </Card.Meta>
@@ -402,11 +404,11 @@ footer={[<Descriptions.Item label="Email">
                     <Descriptions.Item label="Email">venu.mallik@gmail.com  &nbsp;&nbsp;&nbsp; <div id="sntlNumDisplay"></div></Descriptions.Item>
                     <Descriptions.Item label="Links"><a target="_blank" href={"https://www.github.com/venu-mallik"} > Github </a>,&nbsp;<a target="_blank" href={"https://www.linkedin.com/in/venumallik"} >Linkedin</a>, &nbsp;<a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vRYWPmGjM90SLMVlSbc0TgisJ4ww4EsjEg9DESVEwUU9kCOl4_e6t3fgs7c7F7zIVdJn1uEVvG-8W41/pub?embedded=true" > Resume </a></Descriptions.Item>
                     <Descriptions.Item label="Education">Information technology 2012-16 </Descriptions.Item>
-                    <Descriptions.Item label="Experience">
+                    <Descriptions.Item label="Edu & Exp in experience">
                         {expmap[exp]} &nbsp;&nbsp;<Segmented options={['Weeks', 'Months', 'Years']} size="small" value={exp} onChange={(v) => setExp(v)} >
                         </Segmented>  </Descriptions.Item>
-
-                </Descriptions> </>}
+                </Descriptions> 
+                </>}
             </Content>
         </Layout>
             </>
