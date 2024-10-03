@@ -213,6 +213,8 @@ footer={[<Descriptions.Item label="Email">
                                         label: '',
                                         children: <Collapse >
                                          <Collapse.Panel header="OpsCenter (1 year): Senior engineer @ Datastax. Payroll - Innominds" key="1">
+                                            <li>Successfully migrated the legacy Cassandra Java driver (1.x) to the latest 4.x version across multiple modules
+                                                within the OpsCenter - Cassandra cluster management portal.</li>
                                             <li>Work on L3 jira tickets i.e feature improvements and bug fixes </li>
                                             <li> Working on Jython twisted and Java, Clojure , Javascript and Cassandra.</li>
                                             <li>Upgrading cassandra java driver form 1.x to 4.x in multiple modules.</li>
@@ -224,8 +226,10 @@ footer={[<Descriptions.Item label="Email">
                                         label: '',
                                         children: <Collapse >
                                         <Collapse.Panel header='Plexos (1 year): Senior engineer @ Energy exemplar. . Payroll - Innominds' key="1">
+                                        <li>Automation and Optimization: Streamlined the European Resource Adequacy Assessment (ERAA) automation process by converting guidelines
+                                            into efficient Python scripts utilizing pandas, pydantic, and Plexos enums for automatic schema generation.</li>
                                         <li>Lead the Code reviews and optimisation, reduced codebase from 10000 lines to 2000 lines of code and saved 45 minutes execution time.</li>
-                                        <li> the total execution time is brought down from 2 Hours to 1 Hour 10 Minutes .</li>
+                                        <li> The total execution time is brought down from 2 Hours to 1 Hour 10 Minutes .</li>
                                         <li>Reverse engineered Schema from C# enums of prop tool to reduce the steep adoption curve and save time for all stake holders.</li>
                                         <li>100+ Pydantic classes with 1500+ memberships and 4000+ properties are auto generated using Json Schema and Enums.</li>
                                         </Collapse.Panel>
